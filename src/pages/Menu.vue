@@ -13,6 +13,20 @@
   <script>
   export default {
     name:"Menu",
+    data() {
+      return {
+        list_1:[
+          {name:"",
+          data:"Take dissemination of research findings to the broader public",
+          back:"back",
+          flip:false},
+          {name:"",
+          data:"Anchor societal outreach as an element in communication concepts and through science communication as a part of the work of the university press offices",
+          back:"back",
+          flip:false}
+        ]
+      }
+    },
     computed: {
       transform() {
         let num = 5
