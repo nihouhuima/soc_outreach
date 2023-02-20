@@ -46,7 +46,7 @@
             </li>
       </ul>
       </div>
-      <div v-for="item in list_1" :key="item.data" class="flipper" v-bind:class="{'flip': item.flip}" v-on:click="letsFlip(item)">
+      <!-- <div v-for="item in list_1" :key="item.data" class="flipper" v-bind:class="{'flip': item.flip}" v-on:click="letsFlip(item)">
                 <figure class="front">
                     <div class="card">
                         <div class="card-image">
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                 </figure>
-            </div>
+            </div> -->
     </div>
     </div>
     </div>
@@ -101,7 +101,96 @@
           {name:1,
           data:"test3",
           back:"back",
+          flip:false},
+          {name:1,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:1,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:2,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:2,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:2,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:2,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:2,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:3,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:3,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:3,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:3,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:3,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:4,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:4,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:4,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:4,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:4,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:5,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:5,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:5,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:5,
+          data:"test3",
+          back:"back",
+          flip:false},
+          {name:5,
+          data:"test3",
+          back:"back",
           flip:false}
+          
         ]
       }
     },
@@ -117,7 +206,7 @@
         return arr
       },
       transformBig() {
-        let num = 3
+        let num = 25
         let angle = 360/num
         let arr = []
         for (let index = 0; index < num; index++) {
