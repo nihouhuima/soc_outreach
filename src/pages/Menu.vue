@@ -48,7 +48,7 @@
       </div>
       <div v-for="item in list_1" :key="item.data" class="flipper" v-bind:class="{'flip': item.flip}" v-on:click="letsFlip(item)">
                 <figure class="front">
-                    <div class="card">
+                    <div class="card" :id="require(`texte_${item.name}`)">
                         <div class="card-image">
                             
                         </div>
@@ -84,6 +84,8 @@
   </template>
   
   <script>
+import { threadId } from 'worker_threads'
+
   export default {
     name:"Menu",
     data() {
@@ -131,6 +133,12 @@
         document.getElementById("circle-big").style.cssText = `width: ${this.r*2}px; height: ${this.r*2}px;`;
         //document.getElementById("circle-big").style.cssText = `width: ${this.r*2}px; height: ${this.r*2}px;`;
         document.getElementById("circle-small").style.cssText = `margin-top: ${this.r - 200}px; margin-bottom: ${this.r*2 - 170}px;`;
+        for(var i = 0; i<this.list_1.length;i++){
+          if(this.list_1[i]["name"]==1){
+            document.getElementById(`texte_1`).style.cssText = "";
+          }
+        }
+        
     },
     methods: {
       getAxis(angle) {
