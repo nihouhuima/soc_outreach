@@ -2,13 +2,41 @@
   <div>
     <div class="demo">
       <div class="circle" id="circle-big">
-        <ul id="circle-big-ul">
-            <li class="circle-big-li" v-for="(itemB, indexB) in transformBig" :key="itemB" :style="{transform: itemB}">
-                <div> 
-                    {{indexB+1}}
+        <div id="circle-big-ul">
+            <div class="circle-big-li" v-for="(itemB, indexB) in transformBig" :key="itemB" :style="{transform: itemB}" >
+                <div class="flipper" v-bind:class="{'flip': list_1[indexB].flip}" v-on:click="letsFlip(list_1[indexB])"> 
+                    
+                    <figure class="front">
+                    <div class="card">
+                        <div class="card-image">
+                            
+                        </div>
+                        <div class="card-content">
+                          
+                            
+                            <div class="content">
+                                {{ list_1[indexB].data }}
+                                
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                <figure class="back">
+                    <div class="card">
+                        <div class="card-content">
+                            
+                                
+                                        
+                                        {{ list_1[indexB].back }}
+                                
+                                
+                            
+                        </div>
+                    </div>
+                </figure>
                 </div>
-            </li>
-        </ul>
+              </div>
+          </div>
         <div class="circle" id="circle-small">
           <ul class="circle-small-ul">
             <li class="circle-small-li" v-for="(item, index) in transform" :key="item" :style="{transform: item}">
@@ -69,6 +97,10 @@
           {name:1,
           data:"Anchor societal outreach as an element in communication concepts and through science communication as a part of the work of the university press offices",
           back:"back",
+          flip:false},
+          {name:1,
+          data:"test3",
+          back:"back",
           flip:false}
         ]
       }
@@ -85,7 +117,7 @@
         return arr
       },
       transformBig() {
-        let num = 25
+        let num = 3
         let angle = 360/num
         let arr = []
         for (let index = 0; index < num; index++) {
@@ -137,15 +169,13 @@
 .flipper,
 .card {
   font-size: 10px;
-    border: solid;
-    cursor: pointer;
     height: 120px;
-    width:100px;
+    width: 100px;
+    cursor: pointer;
+    
     margin: 0 auto 10px;
 }
-.back .button {
-    padding: 10px 20px;
-}
+
 
 .flipper {
     transition: 0.6s;
