@@ -150,14 +150,14 @@ a:hover{
     background-color: rgb(255, 195, 195);
     padding: 100px;
     box-sizing: border-box;
-  }
-  ul,
-  li {
+}
+ul,
+li {
     margin: 0;
     list-style-type: none;
     padding: 0;
-  }
-  ul {
+}
+ul {
     width: 400px;
     height: 400px;
     background-color: #fff;
@@ -165,17 +165,17 @@ a:hover{
     position: relative;
 }
 li {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  background-color: rgb(97, 153, 74);
-  color: white;
-  font-size: 25px;
-  border-radius: 50%;
-  line-height: 80px;
-  text-align: center;
-  /* left: 50%; */
-  margin-left: -40px;
-  margin-top: -40px;
-  transform-origin: 0px 0px;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background-color: rgb(97, 153, 74);
+    color: white;
+    font-size: 25px;
+    /* border-radius: 50%; */
+    line-height: 80px;
+    text-align: center;
+    /* left: 50%; */
+    margin-left: -40px;
+    margin-top: -40px;
+    transform-origin: 0px 0px;
 }

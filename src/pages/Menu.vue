@@ -1,7 +1,11 @@
 <template>
     <div class="demo">
       <ul>
-        <li v-for="(item,index) in transform" :key="item" :style="{transform: item}">{{index+1}}</li>
+        <li v-for="(item, index) in transform" :key="item" :style="{transform: item}">
+            <div> 
+                <img :src="require(`../assets/${index+1}.png`)">
+            </div>
+            </li>
       </ul>
     </div>
   </template>
@@ -11,7 +15,7 @@
     name:"Menu",
     computed: {
       transform() {
-        let num = 11
+        let num = 5
         let angle = 360/num
         let arr = []
         for (let index = 0; index < num; index++) {
