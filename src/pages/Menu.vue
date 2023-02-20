@@ -1,12 +1,16 @@
 <template>
     <div class="demo">
-      <ul>
-        <li v-for="(item, index) in transform" :key="item" :style="{transform: item}">
-            <div> 
-                <img :src="require(`../assets/${index+1}.png`)">
-            </div>
+      <div class="circle" id="circle-big">
+        <div class="circle" id="circle-small">
+          <ul>
+            <li v-for="(item, index) in transform" :key="item" :style="{transform: item}">
+                <div> 
+                    <img class="img_card" :src="require(`../assets/${index+1}.png`)">
+                </div>
             </li>
-      </ul>
+          </ul>
+        </div>
+      </div>
     </div>
   </template>
   
