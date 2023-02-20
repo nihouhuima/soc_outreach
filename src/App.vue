@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="top-header"> </div>
+    <div id="entete">
+      <img alt="Engage logo" src="./assets/Logo.png">
+
+      <div id="title">
+          <h1 id="societal">
+            Societal Outreach methodology
+          </h1> 
+          <p id="howto"> 
+            How to improve the level of Societal outreach in your university?
+          </p>
+      </div>
+    </div>
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+// import Mission from './components/Mission.vue'
+// import Home from './pages/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // Home,
+    // Mission
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
