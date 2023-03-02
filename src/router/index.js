@@ -2,6 +2,7 @@ import VueRouter from "vue-router"
 import Mission from '../components/Mission'
 import Home from '../pages/Home'
 import Menu from '../pages/Menu'
+import Action from '../pages/Action'
 
 export default new VueRouter({
     routes: [
@@ -18,6 +19,9 @@ export default new VueRouter({
             component: Mission},
         {
             path: '/Menu',
-            component: Menu}
+            component: Menu},
+        {
+            path: '/Action',
+            component: Action}
             ]
 })
