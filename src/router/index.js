@@ -13,7 +13,7 @@ export default new VueRouter({
         {
             path: '/',
             
-            redirect:'/home'},
+            redirect:'/Menu'},
         {
             path: '/Mission',
             component: Mission},

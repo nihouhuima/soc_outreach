@@ -35,14 +35,21 @@ img {
 }
 
 #title{
-    margin-left: 15em;
+    margin-left: auto;
+    margin-right: auto;
     color:#235787;
+    text-align: center;
 }
-
+#no_content{
+    width: 12em;
+    height: 1em;
+}
 .home_block{
     border: 1px solid black;
 }
-
+#howto{
+    font-weight: normal;
+}
 #societal{
     padding-top: 0.3em;
     margin: 0%;
@@ -159,8 +166,8 @@ li {
     padding: 0;
 }
 ul {
-    width: 340px;
-    height: 340px;
+    width: 340px;           /*radius of small circle*/
+    height: 340px;          /*radius of small circle*/
     background-color: #fff;
     border-radius: 50%;
     position: relative;
@@ -215,8 +222,8 @@ li{
     margin-right: auto;
 }
 .card {
-    font-size: 10px; /*taille de la police des textes*/
-    height: 125px;
+    font-size: 10px; /*taille de la police des textes big-circle*/
+    height: 150px;
     width: 100px;
     cursor: pointer;
    /* margin: 0 auto 10px;*/
@@ -226,16 +233,17 @@ li{
 .flipper {
     color: #fff;
     transition: 0.6s;
+    font-size: larger;
     transform-style: preserve-3d;
     position: relative;
     margin: 0 auto 10px;
-    width: 25%;                 /* width of card*/
+    width: 25%;                 /* width of card focused*/
     background-color:linen; 
     z-index: 100; 
-    margin-left: 37.5%;         /* center the card*/
+    margin-left: 37.5%;         /* center the card focused*/
     display: none; 
     margin-top: 10%; 
-    height: 60%;                /* height of card*/
+    height: 60%;                /* height of card focused*/
     text-align: center;
     border-radius: 0.5em;
     box-shadow: 0.5em 0.5em 0.5em rgb(44,62,80, 0.4), -0.5em -0.5em 0.5em rgb(44,62,80, 0.4);
@@ -302,8 +310,6 @@ li{
     z-index: 40; 
     width: 100%;
     height: 100%;
-    /* height: 159em; */
-    /* position:absolute; */
     position:fixed;
     left: 0; top: 0; right: 0; bottom: 0;
     margin: auto; 
@@ -333,6 +339,7 @@ li{
 .btn{
     margin-top: 1.5em;
     color: #2c3e50;
+    font-size: large;
     /* background-color: #235787;
     color: white;
     border: 0px;
@@ -345,4 +352,36 @@ li{
 }
 #card_back_text{
     margin-top: 0;
+}
+#panier{
+    background-color: #235787;
+    color: #fff;
+    width: 4em;
+    height: 2em;
+    float: right;
+    margin-right: -100em ;
+    /* margin-right: 5%;
+    position: fixed;*/
+    /* left: 0; top: 0; right: 0; bottom: 0; */
+    margin: auto; 
+}
+.card_back_form{
+    z-index: 250;
+}
+#panier_text{
+    margin: 0;
+}
+.overturn{
+    text-decoration: underline;
+    margin-bottom: 0%;
+}
+.overturn:hover{
+    color:lavender;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#action_form{
+    text-align: left;
+    padding-left: 2em;
+    padding-right: 2em;
 }

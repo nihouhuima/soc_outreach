@@ -6,12 +6,13 @@
 
       <div id="title">
           <h1 id="societal">
-            Societal Outreach methodology
+            Societal Outreach Approach
           </h1> 
-          <p id="howto"> 
-            How to improve the level of Societal outreach in your university?
-          </p>
+          <h1 id="howto"> 
+            Let's be inspired !
+          </h1>
       </div>
+      <div id="no_content"></div>
     </div>
 
     <router-view></router-view>
