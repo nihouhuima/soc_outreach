@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="top-header"> </div>
+    <!-- <div class="top-header"> </div>
     <div id="entete">
       <img alt="Engage logo" src="./assets/Logo.png">
 
@@ -13,7 +13,7 @@
           </h1>
       </div>
       <div id="no_content"></div>
-    </div>
+    </div> -->
 
     <router-view></router-view>
   </div>

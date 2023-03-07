@@ -1,0 +1,27 @@
+- data index
+    list_1.name
+        1 - missin
+        2 - communication
+        3 - leadership
+        4 - stratery
+        5 - vision
+
+- change the size of big circle
+    1. Menu.vue 
+        data-r
+
+- change the size of smmal circle : 
+    1. Menu.vue
+        data-rs
+    2. index.css
+        search "radius*2 of small circle"
+
+- change the size of card
+    1. Menu.vue
+        data-cardHeight / cardWidth
+    2. index.css
+        circle-big-li : margin-top / margin-left
+
+- center logo
+    1. index.css
+        logo_card / logo_img / logo_text

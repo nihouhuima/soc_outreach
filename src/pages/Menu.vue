@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="demo">
-      <!-- <div id="panier">
-          <p id="panier_text">panier</p>
-      </div> -->
+      <div id="cart">
+          <p id="cart_text" @click="showCart">Cart</p>
+      </div> 
       <div class="circle" id="circle-big">
         <div id="circle-big-ul">
             <div class="circle-big-li" v-for="(itemB, indexB) in transformBig" :key="itemB" :style="{transform: itemB}" >
@@ -33,7 +33,8 @@
         </ul>
         <div id="logo_card"> 
           <img id="logo_img" src="../assets/Logo.png" alt="logo_engage"/>
-          <p id="logo_text">Societal Outreach Approach</p>
+          <p class="logo_text">Societal Outreach Approach</p>
+          <p class="logo_text" id="logo_text_soustitre">Let's be inspired !</p>
         </div>
         
       </div>
@@ -48,7 +49,6 @@
           <figure class="card_front">
               <div class="card_front_content">
                 <div id="intention"></div>
-                <!-- <input type="button" value="Return" @click="returnMap()"/> -->
                 <p class="overturn" v-on:click="letsFlip(showCard)">Discover some examples</p>
                 <p class="overturn" @click="returnMap()" >Back to home page</p>
               </div>
@@ -58,11 +58,12 @@
           <figure class="card_back">
               <div class="card_back_container">
                 <div id="action"> 
-                    <form class="card_back_form" action="" method="">
-                        <div id="action_form"></div>
-                        <input type="submit" value="Confirm" class="btn" id="btn_confirm">
-                        <!-- <input type="button" value="Return" @click="returnMap()" class="btn" id="btn_return"/> -->
-                    </form>
+                    <div class="card_back_form">
+                        <div id="action_form" v-for="(elAction, indexA) in list_1[indexTarget].action" :key="indexA">
+                            <input type='checkbox' name='action' v-model='actions_list' :value="`${indexTarget}_${indexA}`" :id="`${indexTarget}_${indexA}`"><span>{{ elAction }}</span><br/><br/>
+                        </div>
+                        <input type="submit" value="Confirm" class="btn" id="btn_confirm" @click="confirmAction">
+                    </div>
                     <p class="overturn" v-on:click="letsFlip(showCard)"> Flip the card</p>  
                     <p class="overturn" @click="returnMap()" >Back to home page</p>    
                 </div>
@@ -71,7 +72,18 @@
 
         </div>
     
+        <div class="show_cart">
+          <div v-if="this.actions_list_content.length>0">
+              <div v-for="element in this.actions_list_content" :key="element"> 
+                  <p>{{ getAction(element) }}</p><br>
 
+              </div>
+          </div>
+          <div v-else> 
+              <p>You don't choose any action</p>
+          </div>
+          <p class="overturn" @click="returnMap()" >Back to home page</p> 
+        </div>
         
         </div>
 
@@ -80,14 +92,21 @@
   </template>
   
   <script>
-//import { threadId } from 'worker_threads' import bodyParser from 'body-parser'
 
   export default {
     name:"Menu",
     data() {
       return {
         r: 430, //radius 500
-        action: [],
+        rs : 220, // radius for small circle
+        mtb : 150, // margin top for big circle = padding(100) of div 'demo' + margin-top of big circle (100)
+        cardHeight: 12, // height of cards intentions
+        cardWidth: 13, // width of cards intentions
+        
+        indexTarget:0, // index of intention at the card chosen
+        actions_list:[],  // index of actions chosen at the small windows
+        actions_list_content:[], // all the index of actions chosen 
+
         showCard: {},
         list_1:[
           {name:5,
@@ -277,34 +296,35 @@
       }
     },
     mounted(){
+        this.actions_list_content = [];
+        // put the circle at right place
         document.getElementById("circle-big").style.cssText = `width: ${this.r*2}px; height: ${this.r*2}px;`;
-        //document.getElementById("circle-big").style.cssText = `width: ${this.r*2}px; height: ${this.r*2}px;`;
-        document.getElementById("circle-small").style.cssText = `margin-top: ${this.r - 200}px; margin-bottom: ${this.r*2 - 170}px;`;
+        document.getElementById("circle-small").style.cssText = `margin-top: ${this.r-this.rs}px;`; //; margin-bottom: ${this.r*2 - 170}px
 
         var i ;
         var listeTexte1 = document.getElementsByClassName(`texte_1`);
         for(i=0 ; i<listeTexte1.length; i++){
-          listeTexte1[i].style.cssText = "background-color: rgb(225, 148, 78, 1); height: 12em; width: 13em; padding-top: 1em; border: black solid 1px;";       
+          listeTexte1[i].style.cssText = `background-color: rgb(225, 148, 78, 1); height: ${this.cardHeight}em; width: ${this.cardWidth}em; padding-top: 1em; border: black solid 1px;`;       
         }
 
         var listeTexte2 = document.getElementsByClassName(`texte_2`);
         for(i = 0 ; i<listeTexte2.length; i++){
-          listeTexte2[i].style.cssText = "background-color: rgb(199, 11, 118, 1); height: 12em; width: 13em; padding-top: 1em; border: black solid 1px;";       
+          listeTexte2[i].style.cssText = `background-color: rgb(199, 11, 118, 1); height: ${this.cardHeight}em; width: ${this.cardWidth}em; padding-top: 1em; border: black solid 1px;`;       
         }
 
         var listeTexte3 = document.getElementsByClassName(`texte_3`);
         for(i = 0 ; i<listeTexte3.length; i++){
-          listeTexte3[i].style.cssText = "background-color: rgb(236, 184, 52, 1);  height: 12em; width: 13em; padding-top: 1em; border: black solid 1px;";       
+          listeTexte3[i].style.cssText = `background-color: rgb(236, 184, 52, 1); height: ${this.cardHeight}em; width: ${this.cardWidth}em; padding-top: 1em; border: black solid 1px;`;       
         }
 
         var listeTexte4 = document.getElementsByClassName(`texte_4`);
         for(i = 0 ; i<listeTexte4.length; i++){
-          listeTexte4[i].style.cssText = "background-color: rgb(157 205 90);  height: 12em; width: 13em; padding-top: 1em; border: black solid 1px;";       
+          listeTexte4[i].style.cssText = `background-color: rgb(157 205 90); height: ${this.cardHeight}em; width: ${this.cardWidth}em; padding-top: 1em; border: black solid 1px;`;       
         }
 
         var listeTexte5 = document.getElementsByClassName(`texte_5`);
         for(i = 0 ; i<listeTexte5.length; i++){
-          listeTexte5[i].style.cssText = "background-color: rgb(31 98 142);  height: 12em; width: 13em; padding-top: 1em; border: black solid 1px;";       
+          listeTexte5[i].style.cssText = `background-color: rgb(31 98 142); height: ${this.cardHeight}em; width: ${this.cardWidth}em; padding-top: 1em; border: black solid 1px;`;       
         }
     },
     methods: {
@@ -312,7 +332,7 @@
         // 公式，r-半径，angle-角度
         // x: r+r*Math.sin(angle*Math.PI/180)
         // y: r-r*Math.cos(angle*Math.PI/180)
-        return `translate(${170*Math.sin(angle*Math.PI/180)+170}px, ${170-170*Math.cos(angle*Math.PI/180)}px)`
+        return `translate(${this.rs*Math.sin(angle*Math.PI/180)+this.rs}px, ${this.rs-this.rs*Math.cos(angle*Math.PI/180)}px)`
       },
       getAxisBig(angle) {
         // 公式，r-半径，angle-角度
@@ -323,15 +343,8 @@
       },
       showAction(indexB){
             //add information in "showCard"
-            this.showCard = this.list_1[indexB]
-            //show text of each action
-            this.action = this.list_1[indexB].action;
-            var actionForm = document.getElementById("action_form");
-            actionForm.innerHTML = "" //clear the original text ######## <p id='card_back_text'>Veuillez choisir des actions :</p>
-            for(var i = 0; i<this.list_1[indexB].action.length; i++){
-              var actionCat = document.getElementById("action_form");
-              actionCat.innerHTML = actionCat.innerHTML + `<input type='checkbox' name='${indexB}_${i}'><span>${this.list_1[indexB].action[i]}</span><br/><br/>`;
-            }
+            this.showCard = this.list_1[indexB];
+            this.indexTarget = indexB;
 
             //show information of intentions
             var actionIn = document.getElementById("intention");
@@ -339,26 +352,26 @@
 
             //set the color of card
             var actionCard = document.getElementsByClassName("flipper")[0];
-            console.log(`${this.list_1[indexB].name}`);
+            //console.log(`${this.list_1[indexB].name}`);
             switch (this.list_1[indexB].name){
               case 1:
-                  console.log("1");
+                  //console.log("1");
                   actionCard.style.cssText = "background-color:rgb(225, 148, 78, 1);";
                   break;
               case 2:
-                  console.log("2");
+                  //console.log("2");
                   actionCard.style.cssText = "background-color:rgb(199, 11, 118, 1);";
                   break;
               case 3:
-                  console.log("3");
+                  //console.log("3");
                   actionCard.style.cssText = "background-color:rgb(236, 184, 52, 1);";
                   break;
               case 4:
-                  console.log("4");
+                  //console.log("4");
                   actionCard.style.cssText = "background-color:rgb(157, 205, 90, 1);";
                   break;
               case 5:
-                  console.log("5");
+                  //console.log("5");
                   actionCard.style.cssText = "background-color:rgb(31, 98, 142, 1);";
                   break;
             }
@@ -379,11 +392,14 @@
             var backStyle = document.getElementById("back");
             backStyle.style.cssText = "display:none;";
 
+            var cartStyle = document.getElementsByClassName("show_cart")[0];
+            cartStyle.style.cssText = "display:none;";
+
             var bodyStyle = document.body;
             bodyStyle.style.cssText = "overflow:scroll;";
       },
       letsFlip: function(item) {
-        console.log(this.showCard)
+        //console.log(this.showCard)
             // this.showCard.filter(function(v, k) {
             //     return v.id != item.id;
             // }).forEach(function(v, k) {
@@ -392,6 +408,30 @@
             window.setTimeout(function(v, k) {
                 item.flip = !item.flip;
             }, 100)
+        },
+        confirmAction(){
+          //add new action to the list
+          for(var i = 0; i<this.actions_list.length; i++){
+              if(this.actions_list_content.indexOf(this.actions_list[i]) == -1){
+                this.actions_list_content.push(this.actions_list[i]);
+              }
+          }
+          this.returnMap();
+          alert("ok");
+          
+
+          
+        },
+        showCart(){
+          var backStyle = document.getElementById("back");
+          backStyle.style.cssText = "display:block;";
+          var cartStyle = document.getElementsByClassName("show_cart")[0];
+          cartStyle.style.cssText = "display:block;";
+        },
+        getAction(element){
+          var indexIntention = element.substring(0,1);
+          var indexAction = element.substring(2,3);
+          return this.list_1[indexIntention].action[indexAction];
         }
     }
 }

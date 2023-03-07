@@ -151,11 +151,8 @@ a:hover{
 }
 
 .demo {
-  /*   width: 600px;
-    height: 600px; 
-    background-color: rgb(255, 195, 195);*/
     background-color: rgb(35, 87, 135, 0.1);
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 100px;
     box-sizing: border-box;
 }
@@ -166,8 +163,8 @@ li {
     padding: 0;
 }
 ul {
-    width: 340px;           /*radius of small circle*/
-    height: 340px;          /*radius of small circle*/
+    width: 440px;           /*radius*2 of small circle*/
+    height: 440px;          /*radius*2 of small circle*/
     background-color: #fff;
     border-radius: 50%;
     position: relative;
@@ -183,17 +180,15 @@ li{
     border: #235787 solid 1px;
 }
 .circle-big-li {
-    width: 100px;
-    height: 100px;
+    width: 6.65em;
+    height: 6.5em;
     position: absolute;
     color: white;
     font-size: 20px;
-    /* border-radius: 50%; */
-    /* line-height: 80px; */
     text-align: center;
     /* left: 50%; */
-    margin-left: -40px;
-    margin-top: -40px;
+    margin-left: -3.325em; /* width(186) / 2  */
+    margin-top: -3.25em; /* height(187) / 2  */
     transform-origin: 0px 0px;
     /*border: #235787 solid 1px;*/
 }
@@ -202,19 +197,19 @@ li{
     max-height: 180px;
 }
 #circle-small{
-    width: 340px;
-    height: 340px;
+    width: 440px;   /*radius*2 of small circle*/
+    height: 440px;  /*radius*2 of small circle*/
     border: #2c3e50 solid 1px;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
 }
 .circle-small-li{
-    margin-left: -50px;
+    margin-left: -50px; 
     margin-top: -70px;
 }
 #circle-big{
-    margin-top: 100px;
+    margin-top: 100px;    
     margin-bottom: 100px;
     border: #2c3e50 solid 1px;
     border-radius: 50%;
@@ -222,7 +217,7 @@ li{
     margin-right: auto;
 }
 .card {
-    font-size: 10px; /*taille de la police des textes big-circle*/
+    font-size: 10px; /*taille de la police des cartes big-circle, intentions*/
     height: 150px;
     width: 100px;
     cursor: pointer;
@@ -271,16 +266,10 @@ li{
 .card_back {
     transform: rotateY(180deg);
 }
-/* .card_back{
-    color: #fff;
-}
-.card_back:hover{
-    color:aquamarine;
-} */
 .card-image-content{
     margin-left: auto;
     margin-right: auto;
-    max-height: 20px;
+    height: 2.3em;
 }
 .content{
     padding-left: 2px;
@@ -289,20 +278,27 @@ li{
 #logo_card{
     z-index: 30;
     position: relative;
-    margin-top: -215px;
-    margin-left: 75px;
+    margin-top: -19em;
+    text-align: center;
 }
 #logo_img{
-    max-height: 80px;  
+    max-height: 8em; 
+    margin-left: auto;
+    margin-right: auto; 
 }
-#logo_text{
+.logo_text{
     margin: 0px;
     color: #235787;
-    font-size: 10px;
-    margin-left: 30px;
+    font-size: 1.5em;
+    /* margin-left: 1em; */
+}
+#logo_text_soustitre{
+    font-size: 1em;
 }
 #action{
     text-align: center;
+    /* background-color:beige;*/
+    font-size: 0.6em; 
 }
 #back{
     background-color: rgb(44,62,80,0.4);
@@ -346,29 +342,23 @@ li{
     padding: 0.5em;
     border-radius: 5px; */
 }
-#btn_return{
-    margin-left: 1.5em;
-    
-}
 #card_back_text{
     margin-top: 0;
 }
-#panier{
+#cart{
     background-color: #235787;
     color: #fff;
-    width: 4em;
-    height: 2em;
+    width: 2em;
+    height: 1.5em;
+    padding: 0.5em;
+    text-align: center;
     float: right;
-    margin-right: -100em ;
-    /* margin-right: 5%;
-    position: fixed;*/
-    /* left: 0; top: 0; right: 0; bottom: 0; */
-    margin: auto; 
+    margin-right: 2em;
 }
 .card_back_form{
     z-index: 250;
 }
-#panier_text{
+#cart_text{
     margin: 0;
 }
 .overturn{
@@ -380,8 +370,30 @@ li{
     cursor: pointer;
     text-decoration: underline;
 }
+#cart :hover{
+    color:lavender;
+    cursor: pointer;
+    text-decoration: underline;
+}
 #action_form{
     text-align: left;
     padding-left: 2em;
     padding-right: 2em;
+}
+p{
+    margin: 0;
+}
+.show_cart{
+    z-index: 500;
+    /* height: 20em;
+    width: 20em; */
+    position: relative;
+    margin: 0 auto 10px;
+    width: 25%;                 /* width of card focused*/
+    background-color:linen; 
+    z-index: 100; 
+    margin-left: 37.5%;         /* center the card focused*/
+    display: none; 
+    margin-top: 10%; 
+    height: 60%;                /* height of card focused*/
 }
