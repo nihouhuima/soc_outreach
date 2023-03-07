@@ -73,27 +73,59 @@
         </div>
     
         <div class="show_cart">
-          <div v-if="this.actions_list_content.length>0">
-              <div v-for="element in this.actions_list_content" :key="element"> 
-                  <p>{{ getAction(element) }}</p><br>
+          <div class="cart_title"> 
+            <p>check your actions here </p>
+          </div>
 
-              </div>
+          <div class="cart_button">
+                <!-- print as PDF-->
+                <div class="cart_button_link" @click="downloadPDF">Print Download</div>
+                    <VueHtml2pdf :manual-pagination="true" :enable-download="true" ref="DownloadComp">
+                      <section slot="pdf-content">
+                          <download :list_1=list_1 :actions_list_content=actions_list_content></download>
+                      </section>
+                    </VueHtml2pdf>
+                <!-- end of print -->
+
+                <div class="cart_button_link" @click="returnMap()" id="cart_home">Back to home page</div> 
           </div>
-          <div v-else> 
-              <p>You don't choose any action</p>
-          </div>
-          <p class="overturn" @click="returnMap()" >Back to home page</p> 
+
+          
+              <div class="cart_content">
+
+                  <div class="cart_content_container">
+                        <div class="cart_actions">
+                            <div v-if="this.actions_list_content.length>0">
+                                <div v-for="element in this.actions_list_content" :key="element"> 
+                                    <p class="cart_action_el">{{ getAction(element) }}</p><br>
+
+                                </div>
+                            </div>
+                            <div v-else> 
+                                <p>You don't choose any action</p>
+                            </div>
+                        </div>
+                  </div>
+
+        </div>
         </div>
         
         </div>
 
     </div>
+      
+      
     </div>
   </template>
   
   <script>
+import Download from '@/components/Download.vue'
+import VueHtml2pdf from 'vue-html2pdf'
 
   export default {
+    components: { 
+        Download,
+        VueHtml2pdf },
     name:"Menu",
     data() {
       return {
@@ -106,6 +138,12 @@
         indexTarget:0, // index of intention at the card chosen
         actions_list:[],  // index of actions chosen at the small windows
         actions_list_content:[], // all the index of actions chosen 
+        indexIntention:{
+          type:Number
+        },
+        indexAction:{
+          type:Number
+        },
 
         showCard: {},
         list_1:[
@@ -427,11 +465,19 @@
           backStyle.style.cssText = "display:block;";
           var cartStyle = document.getElementsByClassName("show_cart")[0];
           cartStyle.style.cssText = "display:block;";
+          var bodyStyle = document.body;
+          bodyStyle.style.cssText = "overflow:hidden;"; 
         },
         getAction(element){
-          var indexIntention = element.substring(0,1);
-          var indexAction = element.substring(2,3);
+          var indexIntention = element.substring(0,element.indexOf("_"));
+          var indexAction = element.substring(element.indexOf("_")+1,element.indexOf("_")+2);
           return this.list_1[indexIntention].action[indexAction];
+        },
+        downloadPDF () {
+            this.$refs.DownloadComp.generatePdf()
+            
+            this.$router.push({path:'/refresh',query:{path:this.$route.fullPath}})
+            this.returnMap()
         }
     }
 }

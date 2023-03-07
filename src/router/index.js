@@ -3,6 +3,8 @@ import Mission from '../components/Mission'
 import Home from '../pages/Home'
 import Menu from '../pages/Menu'
 import Action from '../pages/Action'
+import Download from '../components/Download'
+import Refresh from '../components/Refresh'
 
 export default new VueRouter({
     routes: [
@@ -22,6 +24,12 @@ export default new VueRouter({
             component: Menu},
         {
             path: '/Action',
-            component: Action}
+            component: Action},
+        {
+            path: '/Download',
+            component: Download},
+        {
+            path: '/Refresh',
+            component: Refresh}
             ]
 })

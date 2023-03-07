@@ -389,11 +389,70 @@ p{
     width: 20em; */
     position: relative;
     margin: 0 auto 10px;
-    width: 25%;                 /* width of card focused*/
+    width: 80%;                 /* width of card focused*/
     background-color:linen; 
     z-index: 100; 
-    margin-left: 37.5%;         /* center the card focused*/
+    margin-left: 10%;         /* center the card focused*/
     display: none; 
-    margin-top: 10%; 
-    height: 60%;                /* height of card focused*/
+    margin-top: 5%; 
+    height: 70%;                /* height of card focused*/
+    border-radius: 1em;
+    background-color: #fff;
+}
+.cart_title{
+    height: 2em;
+    background-color: #235787;
+    border-radius: 1em 1em 0 0;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    line-height: 2em;
+}
+.cart_content{
+    margin: 1em;
+    text-align: center;
+}
+.cart_content_container{
+    width: 100%;
+    overflow: hidden;
+    height: 80em;
+}
+.cart_actions{
+    text-align: left;
+    overflow-y: auto;
+    width: calc(100% + 17px);
+    height: 23%;
+    background-color:whitesmoke;
+    padding: 1em;
+}
+.cart_button{
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-items:right;
+    justify-content: right;
+    padding-top: 1em;
+}
+#cart_home{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.cart_button_link{
+    text-decoration: underline;
+    margin-bottom: 0%;
+}
+.cart_button_link:hover{
+    color:steelblue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.cart_action_el{
+    width: 95%;
+    text-align: justify;
+}
+.download{
+    padding: 3em;
+}
+.download_action{
+    text-align: justify;
 }
