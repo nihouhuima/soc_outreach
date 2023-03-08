@@ -101,7 +101,7 @@
                             <div v-if="this.actions_list_content.length>0">
                                 <div v-for="element in this.actions_list_content" :key="element"> 
                                     <input type="checkbox" :value="element" name="actionChosen" v-model="list_delete">
-                                    <span class="cart_action_el">{{ getAction(element) }}</span><br>
+                                    <span class="cart_action_el">{{ getAction(element) }}</span><br><br>
 
                                 </div>
                             </div>

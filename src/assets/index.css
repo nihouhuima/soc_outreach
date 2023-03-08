@@ -399,39 +399,41 @@ p{
     width: 20em; */
     position: relative;
     margin: 0 auto 10px;
-    width: 80%;                 /* width of card focused*/
+    width: 80%;                 /* width of cart*/
     background-color:linen; 
     z-index: 100; 
-    margin-left: 10%;         /* center the card focused*/
+    margin-left: 10%;         /* center the cart*/
     display: none; 
     margin-top: 5%; 
-    height: 70%;                /* height of card focused*/
+    height: 70%;                /* height of cart*/
     border-radius: 1em;
     background-color: #fff;
 }
 .cart_title{
-    height: 2em;
+    height: 3em;
     background-color: #235787;
     border-radius: 1em 1em 0 0;
     color: #fff;
     text-align: center;
     justify-content: center;
-    line-height: 2em;
+    line-height: 3em;
 }
 .cart_content{
     margin: 1em;
     text-align: center;
+    height: 80%;
 }
 .cart_content_container{
     width: 100%;
     overflow: hidden;
-    height: 80em;
+    height: 100%;
+    margin-bottom: 1em;
 }
 .cart_actions{
     text-align: left;
     overflow-y: auto;
     width: calc(100% + 17px);
-    height: 23%;
+    height: 100%;
     background-color:whitesmoke;
     padding: 1em;
 }

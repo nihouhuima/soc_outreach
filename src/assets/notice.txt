@@ -1,4 +1,7 @@
-- data index
+################# plug-in ################
+	> npm i vue-html2pdf
+
+################# data index ###############
     list_1.name
         1 - missin
         2 - communication
@@ -6,6 +9,7 @@
         4 - stratery
         5 - vision
 
+################# motification #############
 - change the size of big circle
     1. Menu.vue 
         data-r
