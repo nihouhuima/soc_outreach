@@ -196,6 +196,16 @@ li{
     margin-left: 0px;
     max-height: 180px;
 }
+.circle_small_card{
+    height: 180px;
+}
+.img_card_icone{
+    max-height: 30px;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -175px;
+}
 #circle-small{
     width: 440px;   /*radius*2 of small circle*/
     height: 440px;  /*radius*2 of small circle*/
@@ -293,7 +303,7 @@ li{
     /* margin-left: 1em; */
 }
 #logo_text_soustitre{
-    font-size: 1em;
+    font-size: 1.3em;
 }
 #action{
     text-align: center;
@@ -437,6 +447,9 @@ p{
     margin-left: 1em;
     margin-right: 1em;
 }
+#cart_print{
+    margin-left: 1em;
+}
 .cart_button_link{
     text-decoration: underline;
     margin-bottom: 0%;
@@ -447,8 +460,9 @@ p{
     text-decoration: underline;
 }
 .cart_action_el{
-    width: 95%;
+    width: 93%;
     text-align: justify;
+    display: inline-flex;
 }
 .download{
     padding: 3em;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="demo_container">
     <div class="demo">
       <div id="cart">
           <p id="cart_text" @click="showCart">Cart</p>
@@ -26,13 +26,15 @@
           
           <ul class="circle-small-ul">
             <li class="circle-small-li" v-for="(item, index) in transform" :key="item" :style="{transform: item}">
-                <div> 
+                <div class="circle_small_card"> 
                     <img class="img_card" :src="require(`../assets/${index+1}.png`)">
+                    <img v-if="index==0" class="img_card_icone" :src="require(`../assets/5_img.png`)">
+                    <img v-else class="img_card_icone" :src="require(`../assets/${index}_img.png`)">
                 </div>
             </li>
         </ul>
         <div id="logo_card"> 
-          <img id="logo_img" src="../assets/Logo.png" alt="logo_engage"/>
+          <a href="https://www.engageuniversity.eu/"><img id="logo_img" src="../assets/Logo.png" alt="logo_engage"/></a>
           <p class="logo_text">Societal Outreach Approach</p>
           <p class="logo_text" id="logo_text_soustitre">Let's be inspired !</p>
         </div>
@@ -41,7 +43,7 @@
     </div>
 
     <!-- partie action -->
-    <div id="back">
+    <div id="back" @click="positionMouse()">
 
 
       <div class="flipper" v-bind:class="{'flip': showCard.flip}"> 
@@ -62,8 +64,8 @@
                         <div id="action_form" v-for="(elAction, indexA) in list_1[indexTarget].action" :key="indexA">
                             <input type='checkbox' name='action' v-model='actions_list' :value="`${indexTarget}_${indexA}`" :id="`${indexTarget}_${indexA}`"><span>{{ elAction }}</span><br/><br/>
                         </div>
-                        <input type="submit" value="Confirm" class="btn" id="btn_confirm" @click="confirmAction">
                     </div>
+                    <input type="submit" value="Confirm" class="btn" id="btn_confirm" @click="confirmAction">
                     <p class="overturn" v-on:click="letsFlip(showCard)"> Flip the card</p>  
                     <p class="overturn" @click="returnMap()" >Back to home page</p>    
                 </div>
@@ -79,7 +81,8 @@
 
           <div class="cart_button">
                 <!-- print as PDF-->
-                <div class="cart_button_link" @click="downloadPDF">Print Download</div>
+                <div class="cart_button_link" @click="deleteAction">Delete</div>
+                <div class="cart_button_link" @click="downloadPDF" id="cart_print">Download all the actions</div>
                     <VueHtml2pdf :manual-pagination="true" :enable-download="true" ref="DownloadComp">
                       <section slot="pdf-content">
                           <download :list_1=list_1 :actions_list_content=actions_list_content></download>
@@ -97,12 +100,13 @@
                         <div class="cart_actions">
                             <div v-if="this.actions_list_content.length>0">
                                 <div v-for="element in this.actions_list_content" :key="element"> 
-                                    <p class="cart_action_el">{{ getAction(element) }}</p><br>
+                                    <input type="checkbox" :value="element" name="actionChosen" v-model="list_delete">
+                                    <span class="cart_action_el">{{ getAction(element) }}</span><br>
 
                                 </div>
                             </div>
                             <div v-else> 
-                                <p>You don't choose any action</p>
+                                <p>You haven't chosen any action</p>
                             </div>
                         </div>
                   </div>
@@ -138,6 +142,7 @@ import VueHtml2pdf from 'vue-html2pdf'
         indexTarget:0, // index of intention at the card chosen
         actions_list:[],  // index of actions chosen at the small windows
         actions_list_content:[], // all the index of actions chosen 
+        list_delete:[],
         indexIntention:{
           type:Number
         },
@@ -448,14 +453,19 @@ import VueHtml2pdf from 'vue-html2pdf'
             }, 100)
         },
         confirmAction(){
-          //add new action to the list
-          for(var i = 0; i<this.actions_list.length; i++){
-              if(this.actions_list_content.indexOf(this.actions_list[i]) == -1){
-                this.actions_list_content.push(this.actions_list[i]);
+          if(this.actions_list.length>0){
+              //add new action to the list
+              for(var i = 0; i<this.actions_list.length; i++){
+                  if(this.actions_list_content.indexOf(this.actions_list[i]) == -1){
+                    this.actions_list_content.push(this.actions_list[i]);
+                  }
               }
+              this.returnMap();
+              alert("ok");
+          }else{
+              alert("Please choose at least one action ! ");
           }
-          this.returnMap();
-          alert("ok");
+          
           
 
           
@@ -474,10 +484,57 @@ import VueHtml2pdf from 'vue-html2pdf'
           return this.list_1[indexIntention].action[indexAction];
         },
         downloadPDF () {
-            this.$refs.DownloadComp.generatePdf()
+            if(this.actions_list_content.length>0){
+                this.$refs.DownloadComp.generatePdf()
+                this.$router.push({path:'/refresh',query:{path:this.$route.fullPath}})
+                this.returnMap()
+            }else{
+                alert("Please choose at least one action")
+            }
             
-            this.$router.push({path:'/refresh',query:{path:this.$route.fullPath}})
-            this.returnMap()
+        },
+        deleteAction(){
+            if(this.list_delete.length>0){
+                for(var i = 0; i < this.list_delete.length; i++){
+                  var index = this.actions_list_content.indexOf(this.list_delete[i]);
+                  if (index > -1) { // only splice array when item is found
+                    this.actions_list_content.splice(index, 1); // 2nd parameter means remove one item only
+                  }
+                }
+            }else{
+                alert("Please choose the action you want to delate")
+            }
+        },
+        positionMouse() {
+          var wx = window.event.clientX;
+          var wy = window.event.clientY;
+
+          var d = document.getElementsByClassName("flipper")[0];
+          var d_left = d.offsetLeft;
+          var d_top = d.offsetTop;
+          var d_width = d.clientWidth;
+          var d_height = d.clientHeight;
+
+          var c = document.getElementsByClassName("show_cart")[0];
+          var c_left = c.offsetLeft;
+          var c_top = c.offsetTop;
+          var c_width = c.clientWidth;
+          var c_height = c.clientHeight;
+
+          if(d.style.display=="block"){
+            if(wx < d_left || wy<d_top || wx > (d_left + d_width) || wy > (d_top + d_height)){
+              //不在内
+              this.returnMap();
+          }
+          }
+        
+          if(c.style.display=="block"){
+            if(wx < c_left || wy<c_top || wx > (c_left + c_width) || wy > (c_top + c_height)){
+               //不在内
+               this.returnMap();
+           }
+          }
+          
         }
     }
 }
