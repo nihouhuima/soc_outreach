@@ -398,23 +398,18 @@ import VueHtml2pdf from 'vue-html2pdf'
             //console.log(`${this.list_1[indexB].name}`);
             switch (this.list_1[indexB].name){
               case 1:
-                  //console.log("1");
                   actionCard.style.cssText = "background-color:rgb(225, 148, 78, 1);";
                   break;
               case 2:
-                  //console.log("2");
                   actionCard.style.cssText = "background-color:rgb(199, 11, 118, 1);";
                   break;
               case 3:
-                  //console.log("3");
                   actionCard.style.cssText = "background-color:rgb(236, 184, 52, 1);";
                   break;
               case 4:
-                  //console.log("4");
                   actionCard.style.cssText = "background-color:rgb(157, 205, 90, 1);";
                   break;
               case 5:
-                  //console.log("5");
                   actionCard.style.cssText = "background-color:rgb(31, 98, 142, 1);";
                   break;
             }
