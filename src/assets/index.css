@@ -34,121 +34,13 @@ img {
     max-height: 7.5em;
     margin-left: 2em;
 }
-
-#title{
-    margin-left: auto;
-    margin-right: auto;
-    color:#235787;
-    text-align: center;
-}
-#no_content{
-    width: 12em;
-    height: 1em;
-}
-.home_block{
-    border: 1px solid black;
-}
-#howto{
-    font-weight: normal;
-}
-#societal{
-    padding-top: 0.3em;
-    margin: 0%;
-}
-#div_home{
-    background-color: rgb(251, 250, 250);
-    height: 69%;
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: row;
-    justify-items:center;
-    padding-top: 1em;
-}
-#div_mission{
-    background-color: rgb(251, 250, 250);
-    min-height: 69%;
-    padding-top: 1em;
-    padding-left: 10em;
-    padding-right: 10em;
-    display: flex;
-    display: -webkit-flex;
-    flex-direction:column;
-    justify-items:center;
-    justify-content: space-between;
-}
-.home_block{
-    margin-left: 5em;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 25%;
-    height: 10em;
-    text-align: center;   
-}
-.block_content{
-    line-height: 10em;
-    margin: 0%;
-    color: white;
-    
-}
 a:link{
     text-decoration: none;
 }
-.block_content:hover{
-    text-decoration: underline;
-    color: white;
-}
+
 a:hover{
     text-decoration: underline;
     color: white;
-}
-#content_mission{
-    background-color:navy;
-}
-#content_leadership{
-    background-color:darkseagreen
-}
-#content_communication{
-    background-color:sandybrown
-}
-.mission_button{
-    margin-top: 1em;
-    background-color: #235787;
-    color: white;
-    border: 0px;
-    padding: 0.5em;
-    border-radius: 5px;
-    margin-right: 2em;
-}
-.mission_button:hover{
-    text-decoration: underline;
-    color: white;
-}
-#mission_button_center{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-.mission_matrice{
-    margin: 0%;
-}
-.mission_text{
-    padding-bottom: 1em;
-}
-.mission_answer{
-    background-color: rgb(35, 87, 135, 0.1);
-    border: 1px solid #235787;
-    margin-top: 1em;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 1em;
-}
-.mission_answer_title{
-    font-size: large;
-    text-align: center;
-    font-weight: bold;
-}
-.mission_text_title{
-    font-size: large;
 }
 
 .demo {
@@ -217,7 +109,7 @@ li{
 }
 .circle-small-li{
     margin-left: -50px; 
-    margin-top: -70px;
+    margin-top: -95px;
 }
 #circle-big{
     margin-top: 100px;    
@@ -258,19 +150,17 @@ li{
     transform: rotateY(180deg);
 }
 .card_front{
-    margin-left: 0%;
-    margin-right: 0%;
+    margin: 0;
     display: block;
     width: 100%;
-    height: 65%;
-    margin-top: 35%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     backface-visibility: hidden;
 }
 .card_back {
-    margin-left: 0;
+    margin: 0;
     display: block;
     width: 100%;
     height: 100%;
@@ -300,7 +190,7 @@ li{
 #logo_card{
     z-index: 30;
     position: relative;
-    margin-top: -20em;
+    margin-top: -21.5em;
     text-align: center;
 }
 #logo_img{
@@ -321,6 +211,7 @@ li{
     text-align: center;
     /* background-color:beige;*/
     font-size: 0.6em; 
+    height: 100%;
 }
 #back{
     background-color: rgb(44,62,80,0.4);
@@ -341,11 +232,7 @@ li{
 .card_front_content{
     height: 100%;
     width: 100%;
-    display: flex;
-    display: -webkit-flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: column;
+    position: relative;
 }
 .card_back_container{
     height: 100%;
@@ -356,9 +243,8 @@ li{
     flex-direction: column;
 }
 .btn{
-    margin-top: 1.5em;
     color: #2c3e50;
-    font-size: large;
+    font-size: 300;
     /* background-color: #235787;
     color: white;
     border: 0px;
@@ -382,8 +268,16 @@ li{
     margin-top: 0.2em;
 }
 .card_back_form{
+    margin-top: 5%;
+    max-height: 70%;
+    overflow-y: scroll;
     z-index: 250;
+    margin-left: 5%;
+    margin-right: 5%;
 }
+.card_back_form::-webkit-scrollbar {
+    display: none;
+    }
 #cart_text{
     margin: 0;
 }
@@ -403,9 +297,8 @@ li{
     text-decoration: underline;
 }
 #action_form{
-    text-align: left;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-right: 2px;
+    text-align: justify;
 }
 p{
     margin: 0;
@@ -488,4 +381,19 @@ p{
 }
 .download_action{
     text-align: justify;
+}
+.card_button{
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    TRANSFORM: TRANSLATE(-50%, -50%);
+    width: 80%;
+}
+.intention{
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    TRANSFORM: TRANSLATE(-50%, -50%);
+    text-align: center;
 }

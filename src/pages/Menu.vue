@@ -51,7 +51,7 @@
                     
           <figure class="card_front">
               <div class="card_front_content">
-                <div id="intention"></div>
+                <div class="intention"></div>
                 <div class="card_button">
                   <p class="overturn" v-on:click="letsFlip(showCard)">Discover some examples</p>
                   <p class="overturn" @click="returnMap()" >Back to home page</p>
@@ -138,7 +138,7 @@ import VueHtml2pdf from 'vue-html2pdf'
     name:"Menu",
     data() {
       return {
-        r: 430, //radius 500
+        r: 390, //radius 500
         rs : 220, // radius for small circle
         mtb : 150, // margin top for big circle = padding(100) of div 'demo' + margin-top of big circle (100)
         cardHeight: 12, // height of cards intentions
@@ -157,22 +157,16 @@ import VueHtml2pdf from 'vue-html2pdf'
 
         showCard: {},
         list_1:[
-          {name:5,
-          data:"Use the expertise in our disciplines as powerful tools to provide meaningful solutions to challenges (focus on SDG)",
-          back:"action",
-          flip:false,
-          image: "5_img",
-          action:["action1","action2"]},
           {name:1,
           data:"Aim at connecting university research and teaching with societal input and improving them in exchange with society",
           back:"action",
           flip:false,
           image: "1_img",
           action:[
+            "UMA has developped Academic Collaborative Centers/Hubs/Labs in which researchers, students and societal partners work together (i.e. ENGAGE.EU Lab Mannheim Lab on Culture, Arts and Creative Entrepreneurship) on a shared mission AND TransforMA, a 5year strategic project with the aim of strengthening technology and knowledge transfer in order to identify transformation needs and shape transformation processes in close cooperation with regional stakeholders from business and society.",
           "Several members of NHH’s academic staff participate in government-appointed expert groups.", 
           "NHH researchers are represented on approximately 80 boards in private and public enterprises.", 
-          "Researchers are encouraged to engage in public debate. Research-relate news stories in 2021 for NHH was 3,714.",
-          'WU has created a an open platform "WU4Juniors" with 50+ modules on financial and economic literacy, dedictaed primarily to high school pupils, but open to all interested parties',
+          'WU has created a an open platform "WU4Juniors" with 50+ modules on financial and economic literacy, for high school pupils and all interested parties.',
           "Tilburg has created an Academic Collaborative Centers in which researchers, students and societal partners work together on a shared mission (mostly SDG) "]},
           {name:1,
           data:"Take part in or initiate societal debates based on excellent research",
@@ -180,30 +174,29 @@ import VueHtml2pdf from 'vue-html2pdf'
           flip:false,
           image: "1_img",
           action:[
-          "Several members of NHH’s academic staff participate in government-appointed expert groups.",
-          "NHH researchers are represented on approximately 80 boards in private and public enterprises.",
-          "Researchers are encouraged to engage in public debate. Research-relate news stories in 2021 for NHH was 3,714.",
-          "The WU Talks, WU Matters public debates series",
-          "At TiU we also organize a regular tallkshow in the local theater for the general public. Items are showcasing the research at TiU, but also answering to events happening in society through the lens of academic research, for instance the war in Ukrain, or the climate crisis and dutch policies etc etc"]},
+            'UMA has launched public discussion series such as "Transatlantic Climate Conversations" or public panel discussions such as "One Year of War in Ukraine: Impacts and Prospects," in which researchers discuss current issues.',
+            "NHH researchers take part in public debate  (3,714 research relate new stories in 2021).",
+            "WU organizes WU Talks, WU Matters public debates series.",
+            "TiU  organizes a regular talkshow in the local theater for the general public. Items are showcasing the research at TiU, but also answering to events happening in society through the lens of academic research."]},
           {name:1,
           data:"Make research accessible to the public",
           back:"action",
           flip:false,
           image: "1_img",
           action:[
-          "UT capitole Encourage researchers to develop webinars, conferences etc, accessible to the public.",
-          "NHH research is made available through publications, newsletters, media articles and opinion pieces, podcasts, conferences, lectures etc. NHH holds regular media training and opinion writing courses.",
+          'In UMA, the Open Science Office supports researchers at all career stages and from all disciplines. It offers Open Science Checks to examine each researchers’ potential and support the implementation of Open Science techniques into their research. Via training in various formats as well as the website, information on Open Science can be obtained. Funding is provided for Open Science research projects (Open Science Grants) and can be applied for conference visits or research stays that focus on Open Science',
+          "NHH research is made available through various publications, opinion pieces, podcasts, conferences, lectures etc. NHH holds regular media training and opinion writing courses.",
           'WU researchers present their research activites to the public as part of the biennial event  "Long Night of Research" across Austria. ',
-          'Open access publications, publications in journals for professionals.']},
+          'TiU has developped Open access publications, publications in journals for professionals.']},
           {name:1,
           data:"Acknowledge that one of the universities responsibilities beyond research and teaching is engaging with society",
           back:"action",
           flip:false,
           image: "1_img",
           action:[
-          "UT Capitole fosters conferences about the main societal challenges.",
-          "Societal relevance is at the core of the mission statement of NHH - Together for sustainable value creation.",
-          "Societal relevance/third mission is at the core of the mission statement of the university."]},
+          "In UMA, Societal relevance/third mission is at the core of the mission statement of the university. It is also part of the strategic plan of the university.",
+          "Societal relevance is at the core of the mission statement of NHH: conferences and other large events on issues pertaining to sustainability and digitalization are organized.",
+          'In TiU Societal relevance/third mission is at the core of the mission statement of the university.']},
           {name:1,
           data:"Take responsibility to have a positive impact on society as a whole and its individuals",
           back:"action",
@@ -211,7 +204,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           image: "1_img",
           action:[
           "UT Capitole has defined indicators like the number of implemented student's projects.",
-          "Sustainability holds a central place in NHH’s research communication. The NHH podcast Bærekraftseventyr reaches a wide audience with discussions about how to achieve sustainable business models, circular flows of material and green business. The number of listeners has increased steadily since 2020. The podcast is just one example of a range of initiatives in the media or our own channels where we draw attention to and shed light on the important work done by NHH’s researchers in relation to sustainability.",
+          "NHH has a range of initiatives in the media or its own channels to promote the important work done by NHH’s researchers in relation to sustainability, for example the NHH podcast Bærekraftseventyr.",
           'WU has an online programme "Eco Business" (Oeko Business) on the Learn Public platform and a competence center for Sustainability Transformation and Responsibility (STaR)']},
           {name:1,
           data:"Provide students and learners with the knowledge and skills to understand societal contexts ",
@@ -219,18 +212,18 @@ import VueHtml2pdf from 'vue-html2pdf'
           flip:false,
           image: "1_img",
           action:[
-          "ENGAGE.EU has Developped new modules and new programs on digital transformation.",
-          "NHH has adopted a new strategy with sustainability at the core, where knowledge of the social, economic and environmental aspects of sustainability will be clearly integrated into all study programs. Sustainability issues and topics are included in a number of the courses offered in NHH’s study programmes, bot regular and executive education.",
-          "Different programs is proposed within the WU Entrepreneurship Center: Skills Academy, Inspirational Talks, Changemaker, Entrepreneurship avenue, Transfer Hubs.",
-          "ENGAGE.EU Summer School 2023 is on the topic  Transformation to sustainability in Europe, addresses challenges and solutions related to this societal & business phenomenon.",
-          "TiU adopted a Tilburg Educational Profile (the TEP) with three pillars; knowledge, skills and character. The latter one is geared towards enhancing the societal responsibility of our students (Intellectual independence - Critical mindset - Social responsibility - Scientific responsibility Entrepreneurship). We do this for example via modules, challenges."]},
+          "ENGAGE.EU has Developped new modules and new programs on digital transformation, and also a new diploma focused on societal transition.",
+          'Service Learning in UMA is offered in every faculty and implemented in the curriculum of the area teacher education.',
+          "NHH develops courses, integrate topics of sustainability and digital transformation in existing programs and courses on all levels of education at NHH (bachelor, master, PhD and executive).",
+          'WU proposes different programs within the WU Entrepreneurship Center.ENGAGE.EU Summer School 2023 of WU is on "Transformation to sustainability in Europe", addresses challenges and solutions related to this societal & business phenomenon.',
+          'TiU adopted a Tilburg Educational Profile (the TEP) with three pillars; knowledge, skills and character. The latter one is geared towards enhancing the societal responsibility of our students (Intellectual independence - Critical mindset - Social responsibility - Scientific responsibility Entrepreneurship).']},
           {name:1,
           data:"Raise awareness within the universities for societal responsibility",
           back:"action",
           flip:false,
           image: "1_img",
           action:[
-          "UT Capitole wants to create chairs linked to societal outreach",
+            'At UMA, a vice president for sustainability and a vice president for diversity consider these topics especially on the governance level. Many projects and initiatives on all levels adress the topic aswell.',
           "Wu has Volunteering at WU programme, Student Buddies for Kids (Study/Music or Sport Buddies) and KinderUni during Summer for schoolkids",
           "Recently TiU launched 4 academic collabroative centers in which researcher, students and partners work interdisciplinary on a joined mission."]},
           {name:2,
@@ -238,85 +231,87 @@ import VueHtml2pdf from 'vue-html2pdf'
           back:"action",
           flip:false,
           image: "2_img",
-          action:["action1","action2"]},
+          action:[
+            'NHH research is made available through various publications, opinion pieces, podcasts, conferences, lectures etc. NHH holds regular media training and opinion writing courses.',
+            'WU organizes the "Researcher of the Month videos". WU offers also  "One paper, one minute" series in which research papers are presented in one-minute animated videos.',
+            'TiU organizes a regular tallkshow in the local theater for the general public. Items are showcasing the research at TiU, but also answering to events happening in society through the lens of academic research, for instance the war in Ukrain, or the climate crisis and dutch policies']},
           {name:2,
           data:"Anchor societal outreach in communication concepts and through science communication",
           back:"action",
           flip:false,
           image: "2_img",
-          action:["action1","action2"]},
+          action:[
+            'In UMA, Science communication is part of the communications office',
+            'NHH research is made available through various publications, opinion pieces, podcasts, conferences, lectures etc. NHH holds regular media training and opinion writing courses.']},
           {name:2,
           data:"Actively communicate about university’s societal outreach activities to improve visibility towards stakeholders in and outside",
           back:"action",
           flip:false,
           image: "2_img",
-          action:["action1","action2"]},
+          action:[
+            "In UMA, Press releases and the UMA journal allow to communicate about the university's societal outreach",
+            "In WU Through press release, newsletters",
+            "Recently TiU launched 4 academic collabroative centers in which researcher, students and partners work interdisciplinary on a joined mission."]},
           {name:3,
           data:"Designate a responsible for societal outreach in each department of the university, preferably at the management level",
           back:"action",
           flip:false,
           image: "3_img",
-          action:["action1","action2"]},
+          action:[
+            "TiU has 5 schools, each dean is responsible for one academic collaborative center. each center is lead by two professors (from differenmt schools) "]},
           {name:3,
           data:"Actively initiate the mobilization of knowledge on relevant issues between university and society",
           back:"action",
           flip:false,
           image: "3_img",
-          action:["action1","action2"]},
+          action:[
+            'NHH takes responsibility in dissemination of research.'
+          ]},
           {name:4,
-          data:"Enable and motivate students and university members to participate in societal engagement activities",
+          data:"Enable and motivate students and university members to participate in societal engagement activities.",
           back:"action",
           flip:false,
           image: "4_img",
-          action:["action1","action2"]},
+          action:[
+            "ENGAGE.EU proposes challenges based activities like Expedition week.",
+            "In UMA, Student initiatives are highly supported at the UMA campus.",
+            "In TiU, Funding has been made available by both the board as the schools to enable researchers to join the Academic collective centers and hire postdocs with a specific impact-profile."
+          ]},
           {name:4,
           data:"Foster collaborations between researchers and outside / societal partners to work on real-life challenges",
           back:"action",
           flip:false,
           image: "4_img",
-          action:["action1","action2"]},
-          {name:4,
-          data:"Define societal outreach to highlight the opportunities emerging through collaborations among learners, researchers, and societal partners",
-          back:"action",
-          flip:false,
-          image: "4_img",
-          action:["action1","action2"]},
-          {name:4,
-          data:"Promote strong, mission-driven collaborations through partnerships between universities and multi-stakeholder partners in an iterative way",
-          back:"action",
-          flip:false,
-          image: "4_img",
-          action:["action1","action2"]},
-          // {name:5,
-          // data:"Shape the future of society in a positive way through education",
-          // back:"action",
-          // flip:false,
-          // image: "5_img",
-          // action:["action1","action2"]},
-          // {name:5,
-          // data:"Be aware that we can only achieve impact or societal outreach if we collaborate with partners who transfer the impact in society",
-          // back:"action",
-          // flip:false,
-          // image: "5_img",
-          // action:["action1","action2"]},
+          action:[
+            'UT Capitole invites researchers to the challenges activities, propose the researchers to go further or to take in consideration the issues of the challenges activities',
+            'UMA has academic centres like the ZLBI with a focus on collaboration with and in society.',
+            'Research centers collaborate and partner with industry on research and dissemination.',
+
+          ]},
           {name:5,
-          data:"Be aware that as privileged drivers of change, the universities need to playan active role in developing with the society",
+          data:"Be aware that as drivers of change, the universities play an active role in developing sustainable solutions with the partners",
           back:"action",
           flip:false,
           image: "5_img",
-          action:["action1","action2"]},
-          {name:5,
-          data:"Contribute significantly to the purposeful education of responsible, proactive, and engaged citizens of the future",
-          back:"action",
-          flip:false,
-          image: "5_img",
-          action:["action1","action2"]},
+          action:[
+            'ENGAGE.EU has launched a Work Intergrated Learning Programme called "Josefbus" in cooperation with Caritas',
+            "UMA has launched the TransforMA project. It is a huge, 5 year project in collaboration with the Hochschule Mannheim and the aim, to strengthen and deepen the collaboration with Mannheim Socitey. Both universities are in the lead of this project.",
+            'WU EA has developed a short executive education program and hosted panel discussion regarding "Strategic Sustainability Management"'
+          ]},
           {name:5,
           data:"Base actions or activities on an innovative mindset, collective commitment and co-creation by all stakeholders in and outside",
           back:"action",
           flip:false,
           image: "5_img",
-          action:["action1","action2"]}
+          action:['WU delivers Awards for "Innovative Teaching" and an Innovation Office is organizing Innovation Bootcamps and Facilitation Track.']},
+          {name:5,
+          data:"Use the expertise in our disciplines as powerful tools to provide meaningful solutions to challenges (focus on SDG)",
+          back:"action",
+          flip:false,
+          image: "5_img",
+          action:[
+            "The Star competence center is guiding to embedding the SDGs in teaching activities."
+          ]}
           
         ]
       }
@@ -395,7 +390,7 @@ import VueHtml2pdf from 'vue-html2pdf'
             this.indexTarget = indexB;
 
             //show information of intentions
-            var actionIn = document.getElementById("intention");
+            var actionIn = document.getElementsByClassName("intention")[0];
             actionIn.innerHTML = `${this.list_1[indexB].data}`;
 
             //set the color of card
