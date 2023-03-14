@@ -1,9 +1,7 @@
 <template>
   <div class="demo_container">
     <div class="demo">
-      <div id="cart">
-          <p id="cart_text" @click="showCart">Cart</p>
-      </div> 
+
       <div class="circle" id="circle-big">
         <div id="circle-big-ul">
             <div class="circle-big-li" v-for="(itemB, indexB) in transformBig" :key="itemB" :style="{transform: itemB}" >
@@ -37,6 +35,9 @@
           <a href="https://www.engageuniversity.eu/"><img id="logo_img" src="../assets/Logo.png" alt="logo_engage"/></a>
           <p class="logo_text">Societal Outreach Approach</p>
           <p class="logo_text" id="logo_text_soustitre">Let's be inspired !</p>
+          <div id="cart">
+            <p id="cart_text" @click="showCart">Check your actions here</p>
+          </div> 
         </div>
         
       </div>
@@ -51,8 +52,10 @@
           <figure class="card_front">
               <div class="card_front_content">
                 <div id="intention"></div>
-                <p class="overturn" v-on:click="letsFlip(showCard)">Discover some examples</p>
-                <p class="overturn" @click="returnMap()" >Back to home page</p>
+                <div class="card_button">
+                  <p class="overturn" v-on:click="letsFlip(showCard)">Discover some examples</p>
+                  <p class="overturn" @click="returnMap()" >Back to home page</p>
+                </div>
               </div>
                 
           </figure>
@@ -65,9 +68,11 @@
                             <input type='checkbox' name='action' v-model='actions_list' :value="`${indexTarget}_${indexA}`" :id="`${indexTarget}_${indexA}`"><span>{{ elAction }}</span><br/><br/>
                         </div>
                     </div>
-                    <input type="submit" value="Confirm" class="btn" id="btn_confirm" @click="confirmAction">
-                    <p class="overturn" v-on:click="letsFlip(showCard)"> Flip the card</p>  
-                    <p class="overturn" @click="returnMap()" >Back to home page</p>    
+                    <div class="card_button">
+                      <input type="submit" value="Confirm" class="btn" id="btn_confirm" @click="confirmAction">
+                      <p class="overturn" v-on:click="letsFlip(showCard)"> Flip the card</p>  
+                      <p class="overturn" @click="returnMap()" >Back to home page</p>   
+                    </div> 
                 </div>
               </div>
           </figure>
@@ -76,7 +81,7 @@
     
         <div class="show_cart">
           <div class="cart_title"> 
-            <p>check your actions here </p>
+            <p>The actions you have selected are : </p>
           </div>
 
           <div class="cart_button">
@@ -152,12 +157,6 @@ import VueHtml2pdf from 'vue-html2pdf'
 
         showCard: {},
         list_1:[
-          {name:5,
-          data:"Base actions or activities on an innovative mindset, collective commitment and co-creation by all stakeholders in and outside",
-          back:"action",
-          flip:false,
-          image: "5_img",
-          action:["action1","action2"]},
           {name:5,
           data:"Use the expertise in our disciplines as powerful tools to provide meaningful solutions to challenges (focus on SDG)",
           back:"action",
@@ -294,12 +293,12 @@ import VueHtml2pdf from 'vue-html2pdf'
           // flip:false,
           // image: "5_img",
           // action:["action1","action2"]},
-          {name:5,
-          data:"Be aware that we can only achieve impact or societal outreach if we collaborate with partners who transfer the impact in society",
-          back:"action",
-          flip:false,
-          image: "5_img",
-          action:["action1","action2"]},
+          // {name:5,
+          // data:"Be aware that we can only achieve impact or societal outreach if we collaborate with partners who transfer the impact in society",
+          // back:"action",
+          // flip:false,
+          // image: "5_img",
+          // action:["action1","action2"]},
           {name:5,
           data:"Be aware that as privileged drivers of change, the universities need to playan active role in developing with the society",
           back:"action",
@@ -308,6 +307,12 @@ import VueHtml2pdf from 'vue-html2pdf'
           action:["action1","action2"]},
           {name:5,
           data:"Contribute significantly to the purposeful education of responsible, proactive, and engaged citizens of the future",
+          back:"action",
+          flip:false,
+          image: "5_img",
+          action:["action1","action2"]},
+          {name:5,
+          data:"Base actions or activities on an innovative mindset, collective commitment and co-creation by all stakeholders in and outside",
           back:"action",
           flip:false,
           image: "5_img",
@@ -456,7 +461,7 @@ import VueHtml2pdf from 'vue-html2pdf'
                   }
               }
               this.returnMap();
-              alert("ok");
+              alert("Your actions have been selected to purchase your own action plan");
           }else{
               alert("Please choose at least one action ! ");
           }

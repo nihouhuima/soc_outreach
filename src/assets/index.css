@@ -257,16 +257,27 @@ li{
 .flipper.flip {
     transform: rotateY(180deg);
 }
-.card_front,
+.card_front{
+    margin-left: 0%;
+    margin-right: 0%;
+    display: block;
+    width: 100%;
+    height: 65%;
+    margin-top: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
 .card_back {
-  margin: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
+    margin-left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
 }
 .card_front {
     z-index: 2;
@@ -289,11 +300,11 @@ li{
 #logo_card{
     z-index: 30;
     position: relative;
-    margin-top: -19em;
+    margin-top: -20em;
     text-align: center;
 }
 #logo_img{
-    max-height: 8em; 
+    max-height: 6em; 
     margin-left: auto;
     margin-right: auto; 
 }
@@ -331,7 +342,8 @@ li{
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    display: -webkit-flex;
+    justify-content:space-between;
     align-items: center;
     flex-direction: column;
 }
@@ -357,14 +369,17 @@ li{
     margin-top: 0;
 }
 #cart{
-    background-color: #235787;
-    color: #fff;
-    width: 2em;
+    background-color: #fff;
+    color: #235787;
+    width: 12em;
     height: 1.5em;
-    padding: 0.5em;
+    padding: 0.3em;
     text-align: center;
-    float: right;
-    margin-right: 2em;
+    border-radius: 5px;
+    border: #235787 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.2em;
 }
 .card_back_form{
     z-index: 250;
@@ -375,6 +390,7 @@ li{
 .overturn{
     text-decoration: underline;
     margin-bottom: 0%;
+    font-size: small;
 }
 .overturn:hover{
     color:lavender;
@@ -382,7 +398,7 @@ li{
     text-decoration: underline;
 }
 #cart :hover{
-    color:lavender;
+    color:steelblue;
     cursor: pointer;
     text-decoration: underline;
 }
@@ -422,7 +438,7 @@ p{
 .cart_content{
     margin: 1em;
     text-align: center;
-    height: 80%;
+    height: 70%;
 }
 .cart_content_container{
     width: 100%;
