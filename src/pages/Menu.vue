@@ -92,7 +92,7 @@
                 <!-- print as PDF-->
                 <div class="cart_button_link" @click="deleteAction">Delete</div>
                 <div class="cart_button_link" @click="downloadPDF" id="cart_print">Download all the actions</div>
-                    <VueHtml2pdf :manual-pagination="true" :enable-download="true" ref="DownloadComp">
+                    <VueHtml2pdf :manual-pagination="true" :enable-download="true" ref="DownloadComp" :htmlToPdfOptions="{filename: `societal_outreach_actions.pdf`}">
                       <section slot="pdf-content">
                           <download :list_1=list_1 :actions_list_content=actions_list_content></download>
                       </section>
@@ -110,7 +110,7 @@
                             <div v-if="this.actions_list_content.length>0">
                                 <div v-for="(element) in this.actions_list_content" :key="element"> 
                                     <input type="checkbox" :value="element" name="actionChosen" v-model="list_delete">
-                                    <span class="cart_action_el">{{ getAction(element) }}</span><br><br>
+                                    <span class="cart_action_el" v-html=" getAction(element) "></span><br><br>
 
                                 </div>
                             </div>
@@ -127,7 +127,7 @@
 
     </div>
       
-      
+   <!-- <Download/>  -->
     </div>
   </template>
   
@@ -277,7 +277,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           flip:false,
           image: "4_img",
           action:[
-            '<span>ENGAGE.EU proposes challenges based activities like <a target="_blank" href="https://www.engageuniversity.eu/2022/07/15/students-work-on-real-challenges-during-the-first-engage-eu-expedition/">Expedition week.</a></span>',
+            'ENGAGE.EU proposes challenges based activities like&nbsp;<a target="_blank" href="https://www.engageuniversity.eu/2022/07/15/students-work-on-real-challenges-during-the-first-engage-eu-expedition/">Expedition week</a>.',
             "In UMA, Student initiatives are highly supported at the UMA campus.",
             "In TiU, Funding has been made available by both the board as the schools to enable researchers to join the Academic collective centers and hire postdocs with a specific impact-profile."
           ]},
