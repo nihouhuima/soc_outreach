@@ -390,6 +390,7 @@ p{
     width: 93%;
     text-align: justify;
     display: inline-flex;
+    margin-left: 1em;
 }
 .download_action{
     text-align: justify;

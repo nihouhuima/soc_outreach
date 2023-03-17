@@ -12,7 +12,7 @@
             <p><br><b>Here are the actions which you've chosen: </b></p><br>
           <div class="download_action" v-if="this.actions_list_content.length>0">
               <div v-for="element in this.actions_list_content" :key="element"> 
-                <p class="cart_action_el" v-html=" getAction(element) "></p><br>
+                - <p class="cart_action_el" v-html=" getAction(element) "></p><br><br>
 
 
               </div>
