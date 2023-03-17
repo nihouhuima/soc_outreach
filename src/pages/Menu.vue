@@ -67,7 +67,7 @@
                     <div class="card_back_form">
                         <div id="action_form" v-for="(elAction, indexA) in list_1[indexTarget].action" :key="indexA">
                             <input type='checkbox' name='action' v-model='actions_list' :value="`${indexTarget}_${indexA}`" :id="`${indexTarget}_${indexA}`">
-                            <span :id ="`card_back_action_${indexA}`"></span>{{ getelAction(elAction, indexA) }}error<br/><br/>
+                            <span class ="card_back_action" v-html="elAction"></span><br/><br/>
                         </div>
                     </div>
                      
@@ -216,7 +216,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           flip:false,
           image: "1_img",
           action:[
-          "ENGAGE.EU has Developped new modules and new programs on digital transformation, and also a new diploma focused on societal transition.",
+          'ENGAGE.EU has Developped new <a target="_blank" href="https://www.engageuniversity.eu/engage-eu-modules/">modules</a> and new programs on digital transformation, and also a new diploma focused on societal transition.',
           'Service Learning in UMA is offered in every faculty and implemented in the curriculum of the area teacher education.',
           "NHH develops courses, integrate topics of sustainability and digital transformation in existing programs and courses on all levels of education at NHH (bachelor, master, PhD and executive).",
           'WU proposes different programs within the WU Entrepreneurship Center.ENGAGE.EU Summer School 2023 of WU is on "Transformation to sustainability in Europe", addresses challenges and solutions related to this societal & business phenomenon.',
@@ -277,7 +277,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           flip:false,
           image: "4_img",
           action:[
-            '<span>ENGAGE.EU proposes challenges based activities like <a href="https://www.engageuniversity.eu/2022/07/15/students-work-on-real-challenges-during-the-first-engage-eu-expedition/">Expedition week.</a></span>',
+            '<span>ENGAGE.EU proposes challenges based activities like <a target="_blank" href="https://www.engageuniversity.eu/2022/07/15/students-work-on-real-challenges-during-the-first-engage-eu-expedition/">Expedition week.</a></span>',
             "In UMA, Student initiatives are highly supported at the UMA campus.",
             "In TiU, Funding has been made available by both the board as the schools to enable researchers to join the Academic collective centers and hire postdocs with a specific impact-profile."
           ]},
@@ -476,15 +476,6 @@ import VueHtml2pdf from 'vue-html2pdf'
           cartStyle.style.cssText = "display:block;";
           var bodyStyle = document.body;
           bodyStyle.style.cssText = "overflow:hidden;"; 
-        },
-        getelAction(elAction, indexA){
-          // elAction.substring(1, elAction.length -1)
-          var name = "card_back_action_" + indexA
-          var el = document.getElementById(name)
-          console.log(name)
-          console.log(elAction )
-          console.log(el)
-          el.insertAdjacentElement('afterbegin', elAction)
         },
         getAction(element){
           var indexIntention = element.substring(0,element.indexOf("_"));

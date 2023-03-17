@@ -412,3 +412,11 @@ p{
     TRANSFORM: TRANSLATE(-50%, -50%);
     text-align: center;
 }
+.card_back_action a{
+    color: white;
+    text-decoration: underline;
+}
+.card_back_action a:hover{
+    color:aliceblue;
+    text-decoration: underline;
+}
