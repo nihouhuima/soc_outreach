@@ -1,7 +1,10 @@
 <template>
   <div class="demo_container">
     <div class="demo">
-
+      <div id="cart">
+            <p id="cart_text" @click="showCart">Check your actions here </p>
+            <img  @click="showCart" id="cart_img" src="../assets/panier.png" alt="cart" >
+          </div> 
       <div class="circle" id="circle-big">
         <div id="circle-big-ul">
             <div class="circle-big-li" v-for="(itemB, indexB) in transformBig" :key="itemB" :style="{transform: itemB}" >
@@ -35,9 +38,7 @@
           <a href="https://www.engageuniversity.eu/"><img id="logo_img" src="../assets/Logo.png" alt="logo_engage"/></a>
           <p class="logo_text">Societal Outreach Approach</p>
           <p class="logo_text" id="logo_text_soustitre">Let's be inspired !</p>
-          <div id="cart">
-            <p id="cart_text" @click="showCart">Check your actions here</p>
-          </div> 
+          
         </div>
         
       </div>
@@ -53,8 +54,8 @@
               <div class="card_front_content">
                 <div class="intention"></div>
                 <div class="card_button">
-                  <p class="overturn" v-on:click="letsFlip(showCard)">Discover some examples</p>
-                  <p class="overturn" @click="returnMap()" >Back to home page</p>
+                  <p class="overturn" v-on:click="letsFlip(showCard)">Discover some examples</p> 
+                  <!-- <p class="overturn" @click="returnMap()" >Back to home page</p> -->
                 </div>
               </div>
                 
@@ -65,15 +66,18 @@
                 <div id="action"> 
                     <div class="card_back_form">
                         <div id="action_form" v-for="(elAction, indexA) in list_1[indexTarget].action" :key="indexA">
-                            <input type='checkbox' name='action' v-model='actions_list' :value="`${indexTarget}_${indexA}`" :id="`${indexTarget}_${indexA}`"><span>{{ elAction }}</span><br/><br/>
+                            <input type='checkbox' name='action' v-model='actions_list' :value="`${indexTarget}_${indexA}`" :id="`${indexTarget}_${indexA}`">
+                            <span :id ="`card_back_action_${indexA}`"></span>{{ getelAction(elAction, indexA) }}error<br/><br/>
                         </div>
                     </div>
-                    <div class="card_button">
-                      <input type="submit" value="Confirm" class="btn" id="btn_confirm" @click="confirmAction">
-                      <p class="overturn" v-on:click="letsFlip(showCard)"> Flip the card</p>  
-                      <p class="overturn" @click="returnMap()" >Back to home page</p>   
-                    </div> 
+                     
                 </div>
+
+                <div class="card_button">
+                      <button class="btn" id="btn_confirm" @click="confirmAction">Add to cart</button>
+                      <p class="overturn" v-on:click="letsFlip(showCard)"> Flip the card</p> 
+                      <!-- <p class="overturn" @click="returnMap()" >Back to home page</p>    -->
+                    </div>
               </div>
           </figure>
 
@@ -104,7 +108,7 @@
                   <div class="cart_content_container">
                         <div class="cart_actions">
                             <div v-if="this.actions_list_content.length>0">
-                                <div v-for="element in this.actions_list_content" :key="element"> 
+                                <div v-for="(element) in this.actions_list_content" :key="element"> 
                                     <input type="checkbox" :value="element" name="actionChosen" v-model="list_delete">
                                     <span class="cart_action_el">{{ getAction(element) }}</span><br><br>
 
@@ -273,7 +277,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           flip:false,
           image: "4_img",
           action:[
-            "ENGAGE.EU proposes challenges based activities like Expedition week.",
+            '<span>ENGAGE.EU proposes challenges based activities like <a href="https://www.engageuniversity.eu/2022/07/15/students-work-on-real-challenges-during-the-first-engage-eu-expedition/">Expedition week.</a></span>',
             "In UMA, Student initiatives are highly supported at the UMA campus.",
             "In TiU, Funding has been made available by both the board as the schools to enable researchers to join the Academic collective centers and hire postdocs with a specific impact-profile."
           ]},
@@ -472,6 +476,15 @@ import VueHtml2pdf from 'vue-html2pdf'
           cartStyle.style.cssText = "display:block;";
           var bodyStyle = document.body;
           bodyStyle.style.cssText = "overflow:hidden;"; 
+        },
+        getelAction(elAction, indexA){
+          // elAction.substring(1, elAction.length -1)
+          var name = "card_back_action_" + indexA
+          var el = document.getElementById(name)
+          console.log(name)
+          console.log(elAction )
+          console.log(el)
+          el.insertAdjacentElement('afterbegin', elAction)
         },
         getAction(element){
           var indexIntention = element.substring(0,element.indexOf("_"));
