@@ -190,18 +190,18 @@ li{
 #logo_card{
     z-index: 30;
     position: relative;
-    margin-top: -21.5em;
+    margin-top: -20.5em;
     text-align: center;
 }
 #logo_img{
-    max-height: 6em; 
+    max-height: 8em; 
     margin-left: auto;
     margin-right: auto; 
 }
 .logo_text{
     margin: 0px;
     color: #235787;
-    font-size: 1.5em;
+    font-size: 1.7em;
     /* margin-left: 1em; */
 }
 #logo_text_soustitre{
@@ -244,7 +244,7 @@ li{
 }
 .btn{
     color: #2c3e50;
-    font-size: 300;
+    font-size: 1em;
     /* background-color: #235787;
     color: white;
     border: 0px;
@@ -257,15 +257,27 @@ li{
 #cart{
     background-color: #fff;
     color: #235787;
-    width: 12em;
+    width: 14em;
     height: 1.5em;
     padding: 0.3em;
-    text-align: center;
+    padding-left: 1em;
     border-radius: 5px;
     border: #235787 1px solid;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.2em;
+    float: right;
+    margin-right: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+#cart_text{
+    margin: 0;
+}
+#cart_img{
+    max-width: 2em;
+    margin-left: 1em;
 }
 .card_back_form{
     margin-top: 5%;
@@ -278,13 +290,16 @@ li{
 .card_back_form::-webkit-scrollbar {
     display: none;
     }
-#cart_text{
-    margin: 0;
+.card_back_form{
+    -ms-overflow-style: none; /* hide scrollbar for IE */
+    scrollbar-width: none;    /* hide scrollbar for firefox */
 }
+
 .overturn{
     text-decoration: underline;
     margin-bottom: 0%;
-    font-size: small;
+    font-size: normal;
+    margin-top: 0.7em;
 }
 .overturn:hover{
     color:lavender;
