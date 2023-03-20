@@ -167,11 +167,11 @@ import VueHtml2pdf from 'vue-html2pdf'
           flip:false,
           image: "1_img",
           action:[
-            "UMA has developped Academic Collaborative Centers/Hubs/Labs in which researchers, students and societal partners work together (i.e. ENGAGE.EU Lab Mannheim Lab on Culture, Arts and Creative Entrepreneurship) on a shared mission AND TransforMA, a 5year strategic project with the aim of strengthening technology and knowledge transfer in order to identify transformation needs and shape transformation processes in close cooperation with regional stakeholders from business and society.",
+          "UMA has developped Academic Collaborative Centers/Hubs/Labs in which researchers, students and societal partners work together (i.e. ENGAGE.EU Lab Mannheim Lab on Culture, Arts and Creative Entrepreneurship) on a shared mission AND TransforMA, a 5year strategic project with the aim of strengthening technology and knowledge transfer in order to identify transformation needs and shape transformation processes in close cooperation with regional stakeholders from business and society.",
           "Several members of NHH’s academic staff participate in government-appointed expert groups.", 
           "NHH researchers are represented on approximately 80 boards in private and public enterprises.", 
           'WU has created a an open platform "WU4Juniors" with 50+ modules on financial and economic literacy, for high school pupils and all interested parties.',
-          "Tilburg has created an Academic Collaborative Centers in which researchers, students and societal partners work together on a shared mission (mostly SDG) "]},
+          "Tilburg University has created an Academic Collaborative Centers in which researchers, students and societal partners work together on a shared mission (mostly SDG) "]},
           {name:1,
           data:"Take part in or initiate societal debates based on excellent research",
           back:"action",
@@ -216,7 +216,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           flip:false,
           image: "1_img",
           action:[
-          'ENGAGE.EU has Developped new <a target="_blank" href="https://www.engageuniversity.eu/engage-eu-modules/">modules</a> and new programs on digital transformation, and also a new diploma focused on societal transition.',
+          'ENGAGE.EU has developed new <a target="_blank" href="https://www.engageuniversity.eu/engage-eu-modules/">modules</a> and new programs on digital transformation, and also a new diploma focused on societal transition.',
           'Service Learning in UMA is offered in every faculty and implemented in the curriculum of the area teacher education.',
           "NHH develops courses, integrate topics of sustainability and digital transformation in existing programs and courses on all levels of education at NHH (bachelor, master, PhD and executive).",
           'WU proposes different programs within the WU Entrepreneurship Center.ENGAGE.EU Summer School 2023 of WU is on "Transformation to sustainability in Europe", addresses challenges and solutions related to this societal & business phenomenon.',
@@ -262,7 +262,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           flip:false,
           image: "3_img",
           action:[
-            "TiU has 5 schools, each dean is responsible for one academic collaborative center. each center is lead by two professors (from differenmt schools) "]},
+            "TiU has 5 schools, each dean is responsible for one academic collaborative center. Each center is led by two professors (from differenmt schools)."]},
           {name:3,
           data:"Actively initiate the mobilization of knowledge on relevant issues between university and society",
           back:"action",
@@ -287,9 +287,9 @@ import VueHtml2pdf from 'vue-html2pdf'
           flip:false,
           image: "4_img",
           action:[
-            'UT Capitole invites researchers to the challenges activities, propose the researchers to go further or to take in consideration the issues of the challenges activities',
+            'UT Capitole invites researchers to the challenges activities, and proposes the researchers to go further or to take in consideration the issues of the challenges activities',
             'UMA has academic centres like the ZLBI with a focus on collaboration with and in society.',
-            'Research centers collaborate and partner with industry on research and dissemination.',
+            'In NHH, research centers collaborate and partner with industry on research and dissemination.',
 
           ]},
           {name:5,
@@ -299,11 +299,11 @@ import VueHtml2pdf from 'vue-html2pdf'
           image: "5_img",
           action:[
             'ENGAGE.EU has launched a Work Intergrated Learning Programme called "Josefbus" in cooperation with Caritas',
-            "UMA has launched the TransforMA project. It is a huge, 5 year project in collaboration with the Hochschule Mannheim and the aim, to strengthen and deepen the collaboration with Mannheim Socitey. Both universities are in the lead of this project.",
+            "UMA has launched the TransforMA project. It is a huge, 5 year project in collaboration with the Hochschule Mannheim and the aim, to strengthen and deepen the collaboration with Mannheim Society. Both universities are in the lead of this project.",
             'WU EA has developed a short executive education program and hosted panel discussion regarding "Strategic Sustainability Management"'
           ]},
           {name:5,
-          data:"Base actions or activities on an innovative mindset, collective commitment and co-creation by all stakeholders in and outside",
+          data:"Base actions on an innovative mindset, collective commitment and co-creation by all stakeholders in and outside",
           back:"action",
           flip:false,
           image: "5_img",
@@ -314,7 +314,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           flip:false,
           image: "5_img",
           action:[
-            "The Star competence center is guiding to embedding the SDGs in teaching activities."
+            "In WU, the Star competence center is guiding to embedding the SDGs in teaching activities."
           ]}
           
         ]
