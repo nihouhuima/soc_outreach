@@ -171,7 +171,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           "Several members of NHH’s academic staff participate in government-appointed expert groups.", 
           "NHH researchers are represented on approximately 80 boards in private and public enterprises.", 
           'WU has created a an open platform "WU4Juniors" with 50+ modules on financial and economic literacy, for high school pupils and all interested parties.',
-          "Tilburg University has created an Academic Collaborative Centers in which researchers, students and societal partners work together on a shared mission (mostly SDG) "]},
+          "TiU has created an Academic Collaborative Centers in which researchers, students and societal partners work together on a shared mission (mostly SDG) "]},
           {name:1,
           data:"Take part in or initiate societal debates based on excellent research",
           back:"action",
