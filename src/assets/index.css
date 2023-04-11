@@ -8,7 +8,14 @@ body{
     min-width: 62em;
     margin: 0%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -ms-overflow-style: none;  /* IE and Edge _ hide scrollbar*/
+    scrollbar-width: none;  /* Firefox _ hide scrollbar*/
 }
+body::-webkit-scrollbar {
+    display: none; /* Chrome,Safari, Opera _ hide scrollbar*/
+  }
+  
+
 .top-header{
     width: 100%;
     height:2.2em;
@@ -286,14 +293,12 @@ li{
     z-index: 250;
     margin-left: 5%;
     margin-right: 5%;
+    -ms-overflow-style: none;  /* IE and Edge _ hide scrollbar*/
+    scrollbar-width: none;  /* Firefox _ hide scrollbar*/
 }
 .card_back_form::-webkit-scrollbar {
     display: none;
     }
-.card_back_form{
-    -ms-overflow-style: none; /* hide scrollbar for IE */
-    scrollbar-width: none;    /* hide scrollbar for firefox */
-}
 
 .overturn{
     text-decoration: underline;
