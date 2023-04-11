@@ -189,7 +189,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           image: "1_img",
           action:[
           'In UMA, the Open Science Office supports researchers at all career stages and from all disciplines. It offers Open Science Checks to examine each researchers’ potential and support the implementation of Open Science techniques into their research. Via training in various formats as well as the website, information on Open Science can be obtained. Funding is provided for Open Science research projects (Open Science Grants) and can be applied for conference visits or research stays that focus on Open Science',
-          "NHH research is made available through various publications, opinion pieces, podcasts, conferences, lectures etc. NHH holds regular media training and opinion writing courses.",
+          'NHH research is made available through various publications, opinion pieces, <a target="_blank" href="https://podcasts.apple.com/no/podcast/lederskap-nhhs-podkast-om-ledelse/id1498796704">podcasts</a>, conferences, lectures etc. NHH holds regular media training and opinion writing courses.',
           'WU researchers present their research activites to the public as part of the biennial event  "Long Night of Research" across Austria. ',
           'TiU has developped <a target="_black" href="https://www.tilburguniversity.edu/research/open-science-community/open-access">Open access publications</a>, publications in journals for professionals.']},
           {name:1,
@@ -208,7 +208,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           image: "1_img",
           action:[
           "UT Capitole has defined indicators like the number of implemented student's projects.",
-          "NHH has a range of initiatives in the media or its own channels to promote the important work done by NHH’s researchers in relation to sustainability, for example the NHH podcast Bærekraftseventyr.",
+          'NHH has a range of initiatives in the media or its own channels to promote the important work done by NHH’s researchers in relation to sustainability, for example <a target="_blank" href="https://podcasts.apple.com/no/podcast/b%C3%A6rekraftseventyr-med-j%C3%B8rgensen-pedersen/id1545918010">the NHH podcast Bærekraftseventyr</a>.',
           'WU has an online programme "Eco Business" (Oeko Business) on the Learn Public platform and a competence center for Sustainability Transformation and Responsibility (STaR)']},
           {name:1,
           data:"Provide students and learners with the knowledge and skills to understand societal contexts ",
@@ -218,7 +218,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           action:[
           'ENGAGE.EU has developed new <a target="_blank" href="https://www.engageuniversity.eu/engage-eu-modules/">modules</a> and new programs on digital transformation, and also a new diploma focused on societal transition.',
           'Service Learning in UMA is offered in every faculty and implemented in the curriculum of the area teacher education.',
-          "NHH develops courses, integrate topics of sustainability and digital transformation in existing programs and courses on all levels of education at NHH (bachelor, master, PhD and executive).",
+          'NHH develops <a target="_blank" href="https://www.nhh.no/en/executive/andre-executive-studier/developing-sustainable-business-models-and-managing-societal-transition/">courses, integrate topics</a> of sustainability and digital transformation in existing programs and courses on all levels of education at NHH (bachelor, master, PhD and executive).',
           'WU proposes different programs within the WU Entrepreneurship Center.ENGAGE.EU Summer School 2023 of WU is on "Transformation to sustainability in Europe", addresses challenges and solutions related to this societal & business phenomenon.',
           'TiU adopted a <a target="_blank" href="https://www.tilburguniversity.edu/about/education/tep">Tilburg Educational Profile (the TEP)</a> with three pillars; knowledge, skills and character. The latter one is geared towards enhancing the societal responsibility of our students (Intellectual independence - Critical mindset - Social responsibility - Scientific responsibility Entrepreneurship).']},
           {name:1,
