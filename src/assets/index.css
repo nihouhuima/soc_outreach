@@ -262,6 +262,8 @@ li{
     margin-top: 0;
 }
 #cart{
+    right : 0;
+    position: fixed;      
     background-color: #fff;
     color: #235787;
     width: 14em;
