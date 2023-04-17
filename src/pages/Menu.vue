@@ -1,9 +1,10 @@
 <template>
   <div class="demo_container">
     <div class="demo">
+      {{ visit }} 
       <div id="cart">
-            <p id="cart_text" @click="showCart">Check your actions here </p>
-            <img  @click="showCart" id="cart_img" src="../assets/panier.png" alt="cart" >
+            <p v-show="cart_text" id="cart_text" @click="showCart" @mouseenter="showCartText()" @mouseleave="hideCartText()">Check your actions here </p>
+            <img @mouseenter="showCartText()" @mouseleave="hideCartText()" @click="showCart" id="cart_img" src="../assets/panier.png" alt="cart" >
           </div> 
       <div class="circle" id="circle-big">
         <div id="circle-big-ul">
@@ -47,21 +48,23 @@
     <!-- partie action -->
     <div id="back" @click="positionMouse()">
 
-
+      
       <div class="flipper" v-bind:class="{'flip': showCard.flip}"> 
-                    
+         
           <figure class="card_front">
+            <div ><img @click="returnMap()" class="return_img" src="../assets/croix.png"></div>
               <div class="card_front_content">
                 <div class="intention"></div>
                 <div class="card_button">
                   <p class="overturn" v-on:click="letsFlip(showCard)">Discover some examples</p> 
-                  <!-- <p class="overturn" @click="returnMap()" >Back to home page</p> -->
+                  <!-- <p class="overturn" @click="returnMap()" >Back to home page</p>  -->
                 </div>
               </div>
                 
           </figure>
 
           <figure class="card_back">
+            <div ><img @click="returnMap()" class="return_img" src="../assets/croix.png"></div>
               <div class="card_back_container">
                 <div id="action"> 
                     <div class="card_back_form">
@@ -152,13 +155,14 @@ import VueHtml2pdf from 'vue-html2pdf'
         actions_list:[],  // index of actions chosen at the small windows
         actions_list_content:[], // all the index of actions chosen 
         list_delete:[],
+        visit:0,
         indexIntention:{
           type:Number
         },
         indexAction:{
           type:Number
         },
-
+        cart_text: false,
         showCard: {},
         list_1:[
           {name:1,
@@ -535,7 +539,15 @@ import VueHtml2pdf from 'vue-html2pdf'
            }
           }
           
+        },
+        showCartText(){
+          this.cart_text = true;
+        },
+        hideCartText(){
+          this.cart_text = false;
         }
+    },
+    created(){
     }
 }
 </script>
