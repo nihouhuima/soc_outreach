@@ -2,6 +2,7 @@
   <div class="demo_container">
     <div class="demo">
       <!-- {{ visit }}  -->
+      <a class="homepage" href="https://www.engageuniversity.eu/societal-outreach-approach/">Return to Welcome Page</a>
       <div id="cart">
             <p v-show="cart_text" id="cart_text" @click="showCart" @mouseenter="showCartText()" @mouseleave="hideCartText()">Check your actions here </p>
             <img @mouseenter="showCartText()" @mouseleave="hideCartText()" @click="showCart" id="cart_img" src="../assets/panier.png" alt="cart" >

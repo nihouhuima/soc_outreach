@@ -459,3 +459,13 @@ p{
 .return_img:hover{
     cursor: pointer;
 }
+.homepage{
+    padding: 10px;
+    margin-left: 23px;   
+    border: solid #235787;
+    background-color: #fff;
+}
+.homepage:hover{
+    background-color: #235787;
+    color: white;
+}
