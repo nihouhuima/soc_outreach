@@ -175,7 +175,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           "UMA has developped Academic Collaborative Centers/Hubs/Labs in which researchers, students and societal partners work together (i.e. ENGAGE.EU Lab Mannheim Lab on Culture, Arts and Creative Entrepreneurship) on a shared mission AND TransforMA, a 5year strategic project with the aim of strengthening technology and knowledge transfer in order to identify transformation needs and shape transformation processes in close cooperation with regional stakeholders from business and society.",
           "Several members of NHH’s academic staff participate in government-appointed expert groups.", 
           "NHH researchers are represented on approximately 80 boards in private and public enterprises.", 
-          'WU has created a an open platform "WU4Juniors" with 50+ modules on financial and economic literacy, for high school pupils and all interested parties.',
+          'WU has created a an <a target="_blank" href="https://www.wu.ac.at/wu4juniors-1/">open platform "WU4Juniors"</a> with 50+ modules on financial and economic literacy, for high school pupils and all interested parties.',
           'TiU has created <a target="_blank" href="https://www.tilburguniversity.edu/collaboration/academic-collaborative-centers-widespread-prosperity">an Academic Collaborative Centers</a> in which researchers, students and societal partners work together on a shared mission (mostly SDG) ']},
           {name:1,
           data:"Take part in or initiate societal debates based on excellent research",
@@ -185,7 +185,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           action:[
             'UMA has launched public discussion series such as "Transatlantic Climate Conversations" or public panel discussions such as "One Year of War in Ukraine: Impacts and Prospects," in which researchers discuss current issues.',
             "NHH researchers take part in public debate  (3,714 research relate new stories in 2021).",
-            "WU organizes WU Talks, WU Matters public debates series.",
+            "WU organizes <a href=\"https://www.wu.ac.at/en/wumatters/\" target=\"_blank\">WU Talks</a>, WU Matters public debates series.",
             'TiU  organizes a regular <a target="_blank" href="https://www.tilburguniversity.edu/nl/onderzoek/impact/nieuws/terugblik-online-talkshow-energiearmoede-vraagt-om-maatwerk">talkshow</a> in the local theater for the general public. Items are showcasing the research at TiU, but also answering to events happening in society through the lens of academic research.',
             "UT Capitole launches <a target=\"_blank\" href=\"https://www.ut-capitole.fr/accueil/universite/composantes/faculte-de-droit-et-science-politique/act-u-lactualite-au-coeur-de-luniversite-debat-autour-de-la-reforme-des-retraites\">a series of interdisciplinary debates</a> with university researchers experts to highlight current issues."]},
           {name:1,
@@ -196,7 +196,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           action:[
           'In UMA, the Open Science Office supports researchers at all career stages and from all disciplines. It offers Open Science Checks to examine each researchers’ potential and support the implementation of Open Science techniques into their research. Via training in various formats as well as the website, information on Open Science can be obtained. Funding is provided for Open Science research projects (Open Science Grants) and can be applied for conference visits or research stays that focus on Open Science',
           'NHH research is made available through various publications, opinion pieces, <a target="_blank" href="https://podcasts.apple.com/no/podcast/lederskap-nhhs-podkast-om-ledelse/id1498796704">podcasts</a>, conferences, lectures etc. NHH holds regular media training and opinion writing courses.',
-          'WU researchers present their research activites to the public as part of the biennial event  "Long Night of Research" across Austria. ',
+          'WU researchers present their research activites to the public as part of the biennial event  <a target="_blank" href="https://www.wu.ac.at/en/ebc/research-platform/a-night-of-research/">"Long Night of Research"</a> <a target="_blank" href="https://www.wu.ac.at/en/students/my-program/news-for-students/detail/update-mai-2022/">[read more]</a> <a href="https://www.wu.ac.at/fileadmin/wu/h/micropages/lange_nach_der_forschung/LNdF_22_FlyerA5final.pdf" target="">[read more]</a> across Austria. ',
           'TiU has developped <a target="_black" href="https://www.tilburguniversity.edu/research/open-science-community/open-access">Open access publications</a>, publications in journals for professionals.']},
           {name:1,
           data:"Acknowledge that one of the universities responsibilities beyond research and teaching is engaging with society",
@@ -215,7 +215,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           action:[
           "UT Capitole has defined indicators like the number of implemented student's projects.",
           'NHH has a range of initiatives in the media or its own channels to promote the important work done by NHH’s researchers in relation to sustainability, for example <a target="_blank" href="https://podcasts.apple.com/no/podcast/b%C3%A6rekraftseventyr-med-j%C3%B8rgensen-pedersen/id1545918010">the NHH podcast Bærekraftseventyr</a>.',
-          'WU has an online programme "Eco Business" (Oeko Business) on the Learn Public platform and a competence center for Sustainability Transformation and Responsibility (STaR)']},
+          'WU has an online programme "Eco Business" (Oeko Business) on the <a target="_blank" href="https://learnpublic.wu.ac.at/course-overview/learnpublic/toolbox-kommunikation">Learn Public</a> <a target="_blank" href="https://learnpublic.wu.ac.at/course-overview/learnpublic/toolbox-innovation">[read more]</a> platform and a competence center for Sustainability Transformation and Responsibility <a href="https://www.wu.ac.at/en/star/" target="_blank">(STaR)</a>']},
           {name:1,
           data:"Provide students and learners with the knowledge and skills to understand societal contexts ",
           back:"action",
@@ -225,7 +225,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           'ENGAGE.EU has developed new <a target="_blank" href="https://www.engageuniversity.eu/engage-eu-modules/">modules</a> and new programs on digital transformation, and also a new diploma focused on societal transition.',
           'Service Learning in UMA is offered in every faculty and implemented in the curriculum of the area teacher education.',
           'NHH develops <a target="_blank" href="https://www.nhh.no/en/executive/andre-executive-studier/developing-sustainable-business-models-and-managing-societal-transition/">courses, integrate topics</a> of sustainability and digital transformation in existing programs and courses on all levels of education at NHH (bachelor, master, PhD and executive).',
-          'WU proposes different programs within the WU Entrepreneurship Center.ENGAGE.EU Summer School 2023 of WU is on "Transformation to sustainability in Europe", addresses challenges and solutions related to this societal & business phenomenon.',
+          'WU proposes different programs within the WU <a href="https://www.wu.ac.at/en/sec/?login=1" target="_blank">Entrepreneurship Center</a>.ENGAGE.EU <a href="https://www.engageuniversity.eu/engage-eu-summer-school-2023/" target="_blank">Summer School 2023</a> of WU is on "Transformation to sustainability in Europe", addresses challenges and solutions related to this societal & business phenomenon.',
           'TiU adopted a <a target="_blank" href="https://www.tilburguniversity.edu/about/education/tep">Tilburg Educational Profile (the TEP)</a> with three pillars; knowledge, skills and character. The latter one is geared towards enhancing the societal responsibility of our students (Intellectual independence - Critical mindset - Social responsibility - Scientific responsibility Entrepreneurship).']},
           {name:1,
           data:"Raise awareness within the universities for societal responsibility",
@@ -234,7 +234,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           image: "1_img",
           action:[
             'At UMA, a vice president for sustainability and a vice president for diversity consider these topics especially on the governance level. Many projects and initiatives on all levels adress the topic aswell.',
-          "Wu has Volunteering at WU programme, Student Buddies for Kids (Study/Music or Sport Buddies) and KinderUni during Summer for schoolkids",
+          "Wu has <a href=\"https://www.wu.ac.at/studierende/mein-studium/bachelorguide/foerderprogramme/volunteeringwu/\" target=\"_blank\">Volunteering at WU programme, <a href=\"https://kinderuni.at/kinderuniwien/kuw-lehre/\" target=\"_blank\">Student Buddies for Kids</a> <a href=\"https://www.wu.ac.at/studierende/mein-studium/bachelorguide/foerderprogramme/volunteering/lmsch/\" target=\"_blank\">(Study/Music or Sport Buddies)</a> and <a href=\"https://kinderuni.online/wirtschaft/\" target=\"_blank\">KinderUni</a> during Summer for schoolkids",
           'Recently TiU launched 4 <a target="_blank" href="https://www.tilburguniversity.edu/collaboration/academic-collaborative-centers-widespread-prosperity">academic collabroative centers</a> in which researcher, students and partners work interdisciplinary on a joined mission.']},
           {name:2,
           data:"Take dissemination of research findings to the broader public",
@@ -243,7 +243,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           image: "2_img",
           action:[
             'NHH research is made available through various publications, opinion pieces, podcasts, conferences, lectures etc. NHH holds regular media training and opinion writing courses.',
-            'WU organizes the "Researcher of the Month videos". WU offers also  "One paper, one minute" series in which research papers are presented in one-minute animated videos.',
+            'WU organizes the <a href="https://www.wu.ac.at/en/forschung/wu-forscherinnen/researcher-of-the-month-2023/gerald-reiner/" target="_blank">"Researcher of the Month videos"</a>. WU offers also  "One paper, one minute" series in which research papers are presented in one-minute <a href="https://www.youtube.com/playlist?list=PLCGv5qSIfk2TrBWO7kVvFCAlRikGzPN3y" target="_blank">animated videos</a>.',
             'TiU organizes a regular <a target="_blank" href="https://www.tilburguniversity.edu/nl/onderzoek/impact/nieuws/terugblik-online-talkshow-energiearmoede-vraagt-om-maatwerk">tallkshow</a> in the local theater for the general public. Items are showcasing the research at TiU, but also answering to events happening in society through the lens of academic research, for instance the war in Ukrain, or the climate crisis and dutch policies']},
           {name:2,
           data:"Anchor societal outreach in communication concepts and through science communication",
@@ -260,7 +260,7 @@ import VueHtml2pdf from 'vue-html2pdf'
           image: "2_img",
           action:[
             "In UMA, Press releases and the UMA journal allow to communicate about the university's societal outreach",
-            "In WU Through press release, newsletters",
+            "In WU Through <a href=\"https://www.wu.ac.at/en/press/press-releases/\" target=\"_blank\">press release</a>, newsletters",
             'Recently TiU launched 4 <a target="_blank" href="https://www.tilburguniversity.edu/collaboration/academic-collaborative-centers-widespread-prosperity"> academic collabroative centers</a> in which researcher, students and partners work interdisciplinary on a joined mission.']},
           {name:3,
           data:"Designate a responsible for societal outreach in each department of the university, preferably at the management level",
@@ -304,23 +304,23 @@ import VueHtml2pdf from 'vue-html2pdf'
           flip:false,
           image: "5_img",
           action:[
-            'ENGAGE.EU has launched a Work Intergrated Learning Programme called "Josefbus" in cooperation with Caritas',
+            'ENGAGE.EU has launched a Work Intergrated Learning Programme called <a href="https://executiveacademy.at/en/engageeu-strengthen-innopreneurial-competencies" target="_blank">"Josefbus"</a> <a href="https://www.engageuniversity.eu/2022/12/15/work-integrated-learning-redesigning-the-josefbus/" target="_blank">[readmore]</a> in cooperation with Caritas',
             "UMA has launched the TransforMA project. It is a huge, 5 year project in collaboration with the Hochschule Mannheim and the aim, to strengthen and deepen the collaboration with Mannheim Society. Both universities are in the lead of this project.",
-            'WU EA has developed a short executive education program and hosted panel discussion regarding "Strategic Sustainability Management"'
+            'WU <a href="https://executiveacademy.at/de/programme/weiterbildung/management-leadership/strategisches-nachhaltigkeitsmanagement" target="_blank">EA</a> <a href="https://executiveacademy.at/de/news/detail/strategisches-nachhaltigkeitsmanagement/fotogalerie" target="_blank">[read more]</a> has developed a short executive education program and hosted panel discussion regarding "Strategic Sustainability Management"'
           ]},
           {name:5,
           data:"Base actions on an innovative mindset, collective commitment and co-creation by all stakeholders in and outside",
           back:"action",
           flip:false,
           image: "5_img",
-          action:['WU delivers Awards for "Innovative Teaching" and an Innovation Office is organizing Innovation Bootcamps and Facilitation Track.']},
+          action:['WU delivers <a href="https://www.wu.ac.at/en/the-university/news-and-events/news/details-news/detail/wu-awards-2022/#:~:text=For%20the%20Excellent%20Teaching%20Award,during%20the%20previous%20academic%20year.&text=Upon%20activation%2C%20some%20data%20may,to%20third%20parties%20(YouTube)." target="_blank">Awards</a> for "Innovative Teaching" and an <a href="https://www.wu.ac.at/innovationoffice/" target="_blank">Innovation Office</a> is organizing Innovation Bootcamps and Facilitation Track.']},
           {name:5,
           data:"Use the expertise in our disciplines as powerful tools to provide meaningful solutions to challenges (focus on SDG)",
           back:"action",
           flip:false,
           image: "5_img",
           action:[
-            "In WU, the Star competence center is guiding to embedding the SDGs in teaching activities."
+            "In WU, the <a href=\"https://www.wu.ac.at/en/star/\" target=\"_blank\">Star</a> competence center is guiding to embedding the SDGs in teaching activities."
           ]}
           
         ]
